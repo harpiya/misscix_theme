@@ -1,26 +1,3 @@
-<!-- push menu-->
-  <div class="pushmenu menu-home5">
-      <div class="menu-push">
-          <span class="close-left js-close"><i class="ti-close"></i></span>
-          <div class="clearfix"></div>
-          <form role="search" method="get" id="searchform" class="searchform title-font" action="/search">
-              <div>
-                  <label class="screen-reader-text" for="q"></label>
-                  <input type="text" placeholder="Lütfen aramak istediğiniz ürünü yazın" value="" name="q" id="q" autocomplete="off">
-                  <input type="hidden" name="type" value="product">
-                  <button type="submit" id="searchsubmit"><i class="ti-search"></i></button>
-              </div>
-          </form>
-          <ul class="nav-home5 js-menubar clear-space menu-font">
-            {%- for item in top_bar_items -%}
-        			{% if item.right and not item.parent_label -%}
-        				{{ render_item(item) }}
-        			{% endif %}
-        		{%- endfor %}
-          </ul>
-      </div>
-  </div>
-  <!-- end push menu-->
 {% macro render_item(item) %}
 {% if item.child_items %}
 <li class="nav-item dropdown">
@@ -48,6 +25,29 @@
 {% endif %}
 
 {% endmacro %}
+  <!-- push menu-->
+  <div class="pushmenu menu-home5">
+      <div class="menu-push">
+          <span class="close-left js-close"><i class="ti-close"></i></span>
+          <div class="clearfix"></div>
+          <form role="search" method="get" id="searchform" class="searchform title-font" action="/search">
+              <div>
+                  <label class="screen-reader-text" for="q"></label>
+                  <input type="text" placeholder="Lütfen aramak istediğiniz ürünü yazın" value="" name="q" id="q" autocomplete="off">
+                  <input type="hidden" name="type" value="product">
+                  <button type="submit" id="searchsubmit"><i class="ti-search"></i></button>
+              </div>
+          </form>
+          <ul class="nav-home5 js-menubar clear-space menu-font">
+            {%- for item in top_bar_items -%}
+        			{% if item.right and not item.parent_label -%}
+        				{{ render_item(item) }}
+        			{% endif %}
+        		{%- endfor %}
+          </ul>
+      </div>
+  </div>
+  <!-- end push menu-->
 
 
 <header>
