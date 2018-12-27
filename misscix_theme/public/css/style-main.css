@@ -1,3 +1,17 @@
+/**
+ * @Author: Saadettin Yasir AKEL <developer>
+ * @Date:   2018-12-27T13:14:01+03:00
+ * @Email:  yasir@harpiya.com
+ * @Project: Harpiya Kurumsal Yönetim Sistemi
+ * @Filename: style-main.css
+ * @Last modified by:   developer
+ * @Last modified time: 2018-12-27T13:16:27+03:00
+ * @License: MIT License. See license.txt
+ * @Copyright: Harpiya Yazılım Teknolojileri
+ */
+
+
+
 /*------------------------------------------------------------------
 
 [Table of contents]
@@ -540,7 +554,7 @@ a:hover {
   transform: translateY(3px); }
 
 .mega-menu-main {
-  min-width: 650px;
+  min-width: 250px;
   box-shadow: 0px 5px 11.88px 0.12px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0px 5px 11.88px 0.12px rgba(0, 0, 0, 0.1);
   border: 0;
