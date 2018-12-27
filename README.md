@@ -2,7 +2,7 @@
 
 Miss Cix Web Site Teması
 
-Contains:
+İçerikler:
 
 1. misscix_theme.css
 1. footer_extension.html
