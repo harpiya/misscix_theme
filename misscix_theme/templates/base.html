@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <!-- Built on Harpiya. https://harpiya.com/ -->
-<html lang="en">
+<html lang="tr">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>{% block title %} {{ title | striptags }} {% endblock %}</title>
-	<meta name="generator" content="frappe">
+	<meta name="generator" content="harpiya">
 	{% block favicon %}
 	<link rel="shortcut icon"
-		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
+		href="{{ (favicon or "/assets/img/favicon.png") | abs_url }}"
 		type="image/x-icon">
 	<link rel="icon"
-		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
+		href="{{ (favicon or "/assets/img/favicon.png") | abs_url }}"
 		type="image/x-icon">
 	{% endblock %}
 	{%- block head -%}
 	{% block meta_block %}{% endblock %}
-	<link href="/assets/css/frappe-theme-bs4.css" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font-awesome.css">
-	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/octicons/octicons.css">
-	<link type="text/css" rel="stylesheet" href="/assets/misscix_theme/css/github.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/zoa-font.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/font-family.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/slick-theme.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/style-main.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
 	<!-- {% if path == 'login' or template == 'website/doctype/web_form/templates/web_form.html' %}
 	<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
 	{% endif %} -->
@@ -48,10 +55,10 @@
 	{% block base_scripts %}
 	<!-- js should be loaded in body! -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js"></script>
-	<script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
-	<script type="text/javascript" src="/assets/misscix_theme/bootstrap-4/js/popper.min.js"></script>
-	<script type="text/javascript" src="/assets/misscix_theme/bootstrap-4/js/bootstrap.min.js"></script>
+	<script src="/assets/js/jquery-3.3.1.min.js" defer=""></script>
+	<script src="/assets/js/bootstrap.min.js" defer=""></script>
+	<script src="/assets/js/slick.min.js" defer=""></script>
+	<script src="/assets/js/function-main.js" defer=""></script>
 	{% endblock %}
 {%- if js_globals is defined %}
 <script>
