@@ -1,3 +1,5 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
 <div class="banner margin_bottom_150">
 	<div class="container">
 		<h1 class="title-font title-banner">Login/Register</h1>
@@ -68,3 +70,8 @@
 		</form>
 	</div>
 <!--  -->
+{% endblock %}
+
+{% block script %}
+	<script>{% include "templates/includes/login/login.js" %}</script>
+{% endblock %}
