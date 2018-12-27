@@ -13,7 +13,7 @@
           </form>
           <ul class="nav-home5 js-menubar clear-space menu-font">
             {%- for item in top_bar_items -%}
-        			{% if not item.right and not item.parent_label -%}
+        			{% if item.right and not item.parent_label -%}
         				{{ render_item(item) }}
         			{% endif %}
         		{%- endfor %}
@@ -38,11 +38,12 @@
 
 <li>
 {% else %}
-	<li class="nav-item">
-		<a class="nav-link" href="{{ (item.url or '')|abs_url }}"
+	<li class="relative">
+		<a class="link-menu delay03 uppercase" href="{{ (item.url or '')|abs_url }}"
 			{{ item.target or ''}}>
 			{{ item.label }}
 		</a>
+    <figure class="line absolute delay03"></figure>
 	</li>
 {% endif %}
 
