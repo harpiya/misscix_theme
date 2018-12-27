@@ -1,35 +1,6 @@
 <!-- post login tools -->
 {% if not only_static %}
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-<li class="nav-item dropdown logged-in" id="website-post-login"
-	data-label="website-post-login" style="display: none">
-	<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-		<span class="user-image-wrapper"></span>
-		<span class="full-name"></span>
-		<b class="caret"></b>
-	</a>
-	<div class="dropdown-menu" role="menu">
-		{%- for child in post_login -%}
-			{%- if child.url -%}
-				<a class="dropdown-item" href="{{ child.url | abs_url }}" {{ child.target or '' }}
-					rel="nofollow">
-					{{ child.label }}
-				</a>
-			{%- endif -%}
-		{%- endfor -%}
-		<a class="dropdown-item" href="/desk">{{ _('Switch To Desk') }}</a>
-	</div>
-</li>
 {% if not hide_login %}
-<a href="/login" class="link-menu delay03 container_20 inline-block hidden-xs hidden-sm" id="btn-login"><i class="zoa-icon-user"></i></a>
+<a href="/login" class="link-menu delay03 container_20 inline-block hidden-xs hidden-sm" id="btn-login"><i class="zoa-icon-user"></i> Giriş</a>
 {% endif %}
 {% endif %}
