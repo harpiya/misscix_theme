@@ -4,8 +4,8 @@
 <main>
 
 	{% macro main_content() %}
-		<div class="page-content-wrapper">
-			<div class="row page-head">
+		<div class="container shipping-home4 margin_bottom_150">
+			<div class="row">
 				<div class='col-sm-12'>
 					{% if not no_breadcrumbs and parents %}
 					<div class="page-breadcrumbs">
@@ -16,7 +16,7 @@
 					{% endif %}
 				</div>
 				{% if doctype != 'Blog Post' %}
-				<div class="col-sm-8 col-xs-6">
+				<div class="col-sm-8 col-xs-6 content">
 					{% block header %}{% endblock %}
 				</div>
 				{% endif %}
@@ -75,6 +75,6 @@
 	<div {{ container_attributes() }}>
 		{{ main_content() }}
 	</div>
-	{% endif %}	
+	{% endif %}
 </main>
 {% endblock %}
