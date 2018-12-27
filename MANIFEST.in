@@ -1,0 +1,19 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include misscix_theme *.css
+recursive-include misscix_theme *.csv
+recursive-include misscix_theme *.html
+recursive-include misscix_theme *.ico
+recursive-include misscix_theme *.js
+recursive-include misscix_theme *.json
+recursive-include misscix_theme *.md
+recursive-include misscix_theme *.png
+recursive-include misscix_theme *.py
+recursive-include misscix_theme *.svg
+recursive-include misscix_theme *.txt
+recursive-include misscix_theme/public *
+recursive-exclude misscix_theme *.pyc
