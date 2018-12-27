@@ -12,21 +12,11 @@
               </div>
           </form>
           <ul class="nav-home5 js-menubar clear-space menu-font">
-            <li class="level1">
-                <a href="#" class="uppercase">bluz</a>
-            </li>
-              <li class="level1">
-                  <a href="#" class="uppercase">ceket</a>
-              </li>
-              <li class="level1">
-                  <a href="#" class="uppercase">triko</a>
-              </li>
-              <li class="level1">
-                  <a href="#" class="uppercase">etek</a>
-              </li>
-              <li>
-                  <a href="#" class="inline-block uppercase"><i class="zoa-icon-user space_right_10"></i>giriş</a>
-              </li>
+            {%- for item in top_bar_items -%}
+        			{% if not item.right and not item.parent_label -%}
+        				{{ render_item(item) }}
+        			{% endif %}
+        		{%- endfor %}
           </ul>
       </div>
   </div>
@@ -58,6 +48,7 @@
 
 {% endmacro %}
 
+
 <header>
 	<div class="container space_top_bot_55 delay03" id="menu-header">
 		<div class="row flex">
@@ -67,7 +58,7 @@
 			<div class="col-lg-8 col-md-7 hidden-sm hidden-xs menu-center-home1">
 				<ul class="nav navbar-nav menu-font menu-main">
           {%- for item in top_bar_items -%}
-      			{% if not item.right and not item.parent_label -%}
+      			{% if item.right and not item.parent_label -%}
       				{{ render_item(item) }}
       			{% endif %}
       		{%- endfor %}
