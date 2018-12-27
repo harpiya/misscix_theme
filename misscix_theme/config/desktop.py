@@ -4,7 +4,7 @@
 # @Project: Harpiya Kurumsal Yönetim Sistemi
 # @Filename: desktop.py
 # @Last modified by:   developer
-# @Last modified time: 2018-12-27T11:18:40+03:00
+# @Last modified time: 2018-12-27T11:39:22+03:00
 # @License: MIT License. See license.txt
 # @Copyright: Harpiya Yazılım Teknolojileri
 
@@ -15,7 +15,7 @@ from frappe import _
 
 def get_data():
 	return {
-		"Miss Cix Theme": {
+		"MissCix Theme": {
 			"color": "orange",
 			"icon": "fa fa-globe",
 			"label": _("Miss Cix Theme")
