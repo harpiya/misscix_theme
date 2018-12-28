@@ -16,9 +16,13 @@
 
 {% block page_content %}
 	{% include "templates/includes/slideshow.html" %}
-	<article class="web-page-content" id="{{ name }}" {% if text_align -%}style="text-align: {{ text_align }}"{%- endif %}>
-	{{ main_section or "" }}
-	</article>
+	<div class="container shipping-home4 margin_bottom_150">
+		<div class="row">
+			<article class="web-page-content" id="{{ name }}" {% if text_align -%}style="text-align: {{ text_align }}"{%- endif %}>
+			{{ main_section or "" }}
+			</article>
+		</div>
+	</div>	
 	{% if enable_comments -%}
 	<hr>
 	<h3>Discuss</h3>
