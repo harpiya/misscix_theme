@@ -4,16 +4,12 @@
 <main class="container">
 
 	{% macro main_content() %}
+	{% if not no_breadcrumbs and parents %}
+		{% block breadcrumbs %}
+		{% include 'templates/includes/breadcrumbs.html' %}
+		{% endblock %}
+	{% endif %}
 			<div class="row">
-				<div class='col-sm-12'>
-					{% if not no_breadcrumbs and parents %}
-					<div class="page-breadcrumbs">
-						{% block breadcrumbs %}
-						{% include 'templates/includes/breadcrumbs.html' %}
-						{% endblock %}
-					</div>
-					{% endif %}
-				</div>
 				{% if doctype != 'Blog Post' %}
 				<div class="col-sm-8 col-xs-6 content">
 					{% block header %}{% endblock %}
