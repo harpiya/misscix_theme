@@ -8,6 +8,29 @@
 		{% endblock %}
 	{% endif %}
 	{% macro main_content() %}
+			<div class="row">
+				{% if doctype != 'Blog Post' %}
+				<div class="col-sm-8 col-xs-6 content">
+					{% block header %}{% endblock %}
+				</div>
+				{% endif %}
+				<div class="col-sm-4 col-xs-6">
+					{% if show_search %}
+					<div class="page-search-block">
+						{% block search %}
+						{% include
+						'templates/includes/search_box.html' %}
+						{% endblock %}
+					</div>
+					{% endif %}
+
+					{% if self.header_actions() %}
+					<div class="page-header-actions-block">
+						{% block header_actions %}{% endblock %}
+					</div>
+					{% endif %}
+				</div>
+			</div>
 
 				{%- block page_content -%}{%- endblock -%}
 
