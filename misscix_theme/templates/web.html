@@ -1,7 +1,7 @@
 {% extends base_template_path %}
 {% block hero %}{% endblock %}
 {% block content %}
-<main class="container">
+<main">
 
 	{% macro main_content() %}
 			<div class="row">
@@ -36,9 +36,9 @@
 					{% endif %}
 				</div>
 			</div>
-			<div class="page_content">
+
 				{%- block page_content -%}{%- endblock -%}
-			</div>
+
 			<div class="page-footer">
 				<div class="page-next-prev-links">
 					{% if add_next_prev_links %}
