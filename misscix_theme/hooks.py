@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 # @Author: Saadettin Yasir AKEL <developer>
 # @Date:   2018-12-27T11:09:22+03:00
 # @Email:  yasir@harpiya.com
 # @Project: Harpiya Kurumsal Yönetim Sistemi
 # @Filename: hooks.py
 # @Last modified by:   developer
-# @Last modified time: 2018-12-27T11:15:30+03:00
+# @Last modified time: 2018-12-28T22:14:33+03:00
 # @License: MIT License. See license.txt
 # @Copyright: Harpiya Yazılım Teknolojileri
 
@@ -12,9 +13,9 @@
 
 from __future__ import unicode_literals
 app_name = "misscix_theme"
-app_title = "Miss Cix Website Şablonu"
-app_publisher = "Harpiya Yazılım Teknolojileri"
-app_description = "Miss Cix Websitesi Şablonu"
+app_title = u"Miss Cix Website Şablonu"
+app_publisher = u"Harpiya Yazılım Teknolojileri"
+app_description = u"Miss Cix Websitesi Şablonu"
 app_icon = "fa fa-globe"
 app_color = "orange"
 app_email = "info@harpiya.com"
