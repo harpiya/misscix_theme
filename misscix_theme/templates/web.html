@@ -7,7 +7,7 @@
 		{% include 'templates/includes/breadcrumbs.html' %}
 		{% endblock %}
 	{% endif %}
-
+	{% macro main_content() %}
 			<div class="row">
 				{% if doctype != 'Blog Post' %}
 				<div class="col-sm-8 col-xs-6 content">
@@ -46,11 +46,16 @@
 					{% endif %}
 				</div>
 			</div>
+	{% endmacro %}
+
+	{% macro container_attributes() %}
+	id="page-{{ name or route }}" data-path="{{ pathname }}" {%- if page_or_generator=="Generator" %}source-type="Generator" data-doctype="{{ doctype }}"{% endif %}
+	{% endmacro %}
 
 
 	{% if show_sidebar %}
 	<div class="container">
-		<div class="row">
+		<div class="row" {{ container_attributes() }}>
 				<div class="pt-4 col-sm-2 border-right sidebar-column">
 					{% include "templates/includes/web_sidebar.html" %}
 				</div>
@@ -60,9 +65,9 @@
 		</div>
 	</div>
 	{% else %}
-	<div>
+
 		{{ main_content() }}
-	</div>
+
 	{% endif %}
 </main>
 {% endblock %}
