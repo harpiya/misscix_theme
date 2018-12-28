@@ -8,6 +8,8 @@
 		{% endblock %}
 	{% endif %}
 	{% macro main_content() %}
+	<div class="container">
+			<div class="row">
 				{% if doctype != 'Blog Post' %}
 				<div class="col-sm-8 col-xs-6 content">
 					{% block header %}{% endblock %}
@@ -29,7 +31,8 @@
 					</div>
 					{% endif %}
 				</div>
-
+			</div>
+	</div>
 				{%- block page_content -%}{%- endblock -%}
 
 	{% endmacro %}
