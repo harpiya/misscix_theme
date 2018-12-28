@@ -7,7 +7,7 @@
 		{% include 'templates/includes/breadcrumbs.html' %}
 		{% endblock %}
 	{% endif %}
-	
+
 			<div class="row">
 				{% if doctype != 'Blog Post' %}
 				<div class="col-sm-8 col-xs-6 content">
@@ -50,7 +50,7 @@
 
 	{% if show_sidebar %}
 	<div class="container">
-		<div class="row" {{ container_attributes() }}>
+		<div class="row">
 				<div class="pt-4 col-sm-2 border-right sidebar-column">
 					{% include "templates/includes/web_sidebar.html" %}
 				</div>
@@ -60,7 +60,7 @@
 		</div>
 	</div>
 	{% else %}
-	<div {{ container_attributes() }}>
+	<div>
 		{{ main_content() }}
 	</div>
 	{% endif %}
