@@ -8,44 +8,9 @@
 		{% endblock %}
 	{% endif %}
 	{% macro main_content() %}
-			<div class="row">
-				{% if doctype != 'Blog Post' %}
-				<div class="col-sm-8 col-xs-6 content">
-					{% block header %}{% endblock %}
-				</div>
-				{% endif %}
-				<div class="col-sm-4 col-xs-6">
-					{% if show_search %}
-					<div class="page-search-block">
-						{% block search %}
-						{% include
-						'templates/includes/search_box.html' %}
-						{% endblock %}
-					</div>
-					{% endif %}
 
-					{% if self.header_actions() %}
-					<div class="page-header-actions-block">
-						{% block header_actions %}{% endblock %}
-					</div>
-					{% endif %}
-				</div>
-			</div>
-			<div class="page_content">
 				{%- block page_content -%}{%- endblock -%}
-			</div>
-			<div class="page-footer">
-				<div class="page-next-prev-links">
-					{% if add_next_prev_links %}
-					{% include 'templates/includes/next-prev-links.html' %}
-					{% endif %}
-					{% if show_sidebar and template.endswith('.md') and repo %}
-						<a class='text-muted improve-link' target='_blank'
-							href="https://github.com/{{ repo }}/blob/master/{{ repo.split('/')[1] }}/{{ template }}">
-							Improve this page</a>
-					{% endif %}
-				</div>
-			</div>
+
 	{% endmacro %}
 
 	{% macro container_attributes() %}
