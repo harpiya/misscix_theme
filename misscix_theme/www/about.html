@@ -5,9 +5,7 @@
 {% include "templates/pages/web_sidebar.html" %}
 {% endblock %}
 {% block page_content %}
-<div class="container shipping-home4 margin_bottom_150">
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+
 <article class="about-content">
 	{{ doc.company_introduction or """<p>Some Introduction about your company that you would
 			like your website visitor to know.
@@ -44,7 +42,5 @@
 	{% endif %}
 	{{ doc.footer or "" }}
 </article>
-</div>
-</div>
-</div>
+
 {% endblock %}
