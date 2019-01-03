@@ -58,7 +58,9 @@
 				<!--  -->
 				<div class="product accessories blazers shoes trousers column">
 					<div class="img-product relative">
-						{{ item.image }}
+						{{ item.thumbnail }}
+						{{ frappe.utils.quoted(website_image) }}
+						{{ frappe.utils.quoted(image) }}
 						<figure class="absolute uppercase label-new title-font text-center">yeni</figure>
 						<div class="product-icon absolute text-center">
 							<form method="post" action="/cart/add" enctype="multipart/form-data" class="inline-block icon-addcart">
