@@ -37,7 +37,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 margin_bottom_150">
-					{%- block page_content -%}
+					{%- block page_content -%}{%- endblock -%}
 					{% if homepage.products %}
 					<div class='featured-products-section' itemscope itemtype="http://schema.org/Product">
 						<h5 class='featured-product-heading'>{{ _("Featured Products") }}</h5>
@@ -60,8 +60,7 @@
 							<a href="{{ homepage.products_url or "/products" }}" class="btn btn-primary all-products">
 								{{ _("View All Products") }}</a></div>
 					</div>
-					{% endif %}
-					{%- endblock -%}
+					{% endif %}					
 			</div>
 		</div>
 	</div>
