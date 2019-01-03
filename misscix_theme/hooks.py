@@ -24,9 +24,6 @@ app_version = "0.0.1"
 hide_in_installer = True
 home_page = "home"
 
-website_context = {
-	"disable_website_theme": True
-}
 
 # Includes in <head>
 # ------------------
