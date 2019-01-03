@@ -26,6 +26,17 @@
 				<a href="{{ homepage.products_url or "/products" }}" class="btn btn-primary all-products">
 					{{ _("View All Products") }}</a></div>
 		</div>
+
+		{% for items in homepage.slayt %}
+		<a class="product-link" href="">
+			<div class="col-sm-4 col-xs-4 product-image-wrapper">
+				<div class="product-image-img">
+					<!-- thumbnail not updated, and used as background image in item card -->
+				<div class="product-text" itemprop="name">{{ items.heading }}</div>
+				</div>
+			</div>
+		</a>
+		{% endfor %}
 		{% endif %}
 	</div>
 </div>
