@@ -1,8 +1,16 @@
-# Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
-# License: GNU General Public License v3. See license.txt
+# @Author: Saadettin Yasir AKEL <developer>
+# @Date:   2019-01-03T13:44:02+03:00
+# @Email:  yasir@harpiya.com
+# @Project: Harpiya Kurumsal Yönetim Sistemi
+# @Filename: home.py
+# @Last modified by:   developer
+# @Last modified time: 2019-01-03T13:46:12+03:00
+# @License: MIT License. See license.txt
+# @Copyright: Harpiya Yazılım Teknolojileri
 
 from __future__ import unicode_literals
 import frappe
+from frappe.website.doctype.website_slideshow.website_slideshow import get_slideshow
 
 no_cache = 1
 no_sitemap = 1
@@ -27,3 +35,6 @@ def get_context(context):
 			})
 
 	context.homepage = homepage
+
+	if context.slideshow:
+		context.update(get_slideshow(self))
