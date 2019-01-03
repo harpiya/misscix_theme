@@ -1,72 +1,43 @@
 {% extends "templates/web.html" %}
-{% from "erpnext/templates/includes/macros.html" import product_image_square %}
+
+{%- block header -%} {{ header or "" }} {%- endblock -%}
+
+{% block meta_block %}
+	{% include "templates/includes/meta_block.html" %}
+{% endblock %}
+
+{% block hero %}{{ hero or "" }}{% endblock %}
+
+{% block breadcrumbs %}
+    {% if not no_breadcrumbs %}
+    {% include "templates/includes/breadcrumbs.html" %}
+    {% endif %}
+{% endblock %}
 
 {% block page_content %}
-{% include "misscix_theme/templates/includes/slideshow.html" %}
-as
-<div class="row">
-	<div class="col-sm-12">
-		{% if homepage.products %}
-		<div class='featured-products-section' itemscope itemtype="http://schema.org/Product">
-			<h5 class='featured-product-heading'>{{ _("Featured Products") }}</h5>
-			<div class="featured-products">
-				<div id="search-list" class="row" style="margin-top:40px;">
-					{% for item in homepage.products %}
-					<a class="product-link" href="{{ item.route|abs_url }}">
-						<div class="col-sm-4 col-xs-4 product-image-wrapper">
-							<div class="product-image-img">
-								<!-- thumbnail not updated, and used as background image in item card -->
-								{{ product_image_square(item.image) }}
-							<div class="product-text" itemprop="name">{{ item.item_name }}</div>
-							</div>
-						</div>
-					</a>
-					{% endfor %}
-				</div>
+	{% include "templates/includes/slideshow.html" %}
+	<div class="container collection-home3">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-8 col-xs-12">
+				<article class="web-page-content" id="{{ name }}" {% if text_align -%}style="text-align: {{ text_align }}"{%- endif %}>
+				{{ main_section or "" }}
+				</article>
 			</div>
-			<div class="text-center padding">
-				<a href="{{ homepage.products_url or "/products" }}" class="btn btn-primary all-products">
-					{{ _("View All Products") }}</a></div>
 		</div>
-		{% endif %}
 	</div>
-</div>
+	{% if enable_comments -%}
+	<hr>
+	<h3>Discuss</h3>
+	{% include 'templates/includes/comments/comments.html' %}
+	{%- endif %}
 {% endblock %}
 
 {% block style %}
 <style>
-	.hero {
-		padding-top: 50px;
-		padding-bottom: 100px;
-	}
-
-	.hero h1 {
-		font-size: 40px;
-		font-weight: 200;
-	}
-
-	.home-login {
-		margin-top: 30px;
-	}
-	.btn-login {
-		width: 80px;
-	}
-
-	.featured-product-heading, .all-products {
-		 text-transform: uppercase;
-		 letter-spacing: 0.5px;
-		 font-size: 12px;
-		 font-weight: 500;
-	}
-
-	.all-products {
-		 font-weight: 300;
-		 padding-left: 25px;
-		 padding-right: 25px;
-		 padding-top: 10px;
-		 padding-bottom: 10px;
-	}
-
-
+{{ style or "" }}
 </style>
+{% endblock %}
+
+{% block script %}
+    <script>{{ script or "" }}</script>
 {% endblock %}
