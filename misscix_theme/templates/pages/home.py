@@ -4,7 +4,7 @@
 # @Project: Harpiya Kurumsal Yönetim Sistemi
 # @Filename: home.py
 # @Last modified by:   developer
-# @Last modified time: 2019-01-03T13:46:12+03:00
+# @Last modified time: 2019-01-03T14:23:35+03:00
 # @License: MIT License. See license.txt
 # @Copyright: Harpiya Yazılım Teknolojileri
 
@@ -36,5 +36,5 @@ def get_context(context):
 
 	context.homepage = homepage
 
-	if context.slideshow:
+	if context.homepage.slideshow:
 		context.update(get_slideshow(self))
