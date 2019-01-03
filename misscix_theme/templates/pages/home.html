@@ -1,5 +1,5 @@
 {% extends "templates/web.html" %}
-{% from "templates/includes/macros.html" import product_image_square %}
+{% from "templates/includes/macros.html" import product_image %}
 
 {% block page_content %}
 <div class="container relative margin_bottom_150">
@@ -58,9 +58,7 @@
 				<!--  -->
 				<div class="product accessories blazers shoes trousers column">
 					<div class="img-product relative">
-						{{ product_image_square(item.thumbnail or item.image) }}
-						{{ item.website_image }}
-						{{ product_image_square(item.image) }}
+						{{ product_image(item.thumbnail or item.image) }}
 						<figure class="absolute uppercase label-new title-font text-center">yeni</figure>
 						<div class="product-icon absolute text-center">
 							<form method="post" action="/cart/add" enctype="multipart/form-data" class="inline-block icon-addcart">
