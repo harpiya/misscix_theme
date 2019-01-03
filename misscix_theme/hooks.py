@@ -22,7 +22,7 @@ app_email = "info@harpiya.com"
 app_url = "https://harpiya.com"
 app_version = "0.0.1"
 hide_in_installer = True
-home_page = "home"
+# home_page = "home"
 
 
 # Includes in <head>
