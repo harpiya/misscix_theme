@@ -2,8 +2,7 @@
 {% if website_image -%}
 	<meta itemprop="image" content="{{ frappe.utils.quoted(website_image) | abs_url }}"></meta>
 {%- endif %}
-<img itemprop="image" src="{{ website_image | abs_url }}" class="img-responsive">
-{% endmacro %}
+<img itemprop="image" src="{{ frappe.utils.quoted(website_image) | abs_url }}" class="img-responsive">{% endmacro %}
 
 {% macro product_image(website_image, css_class="") %}
     <div class="product-image {% if not website_image -%} missing-image {%- endif %} {{ css_class }}">
