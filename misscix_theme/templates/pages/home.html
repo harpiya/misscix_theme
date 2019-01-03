@@ -18,7 +18,7 @@
 		<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 slider-home1 space_bot_70 absolute">
 			{% for slide in homepage.slayt %}
 			<div class="content-slider">
-				<a href="#"><img src="{{ slide.image }}" class="img-responsive" alt=""></a>
+				<a href="#"><img src="{{ slide.image }}" class="img-responsive" alt="{{ slide.heading }}"></a>
 			</div>
 			{% endfor %}
 		</div>
@@ -58,7 +58,7 @@
 				<!--  -->
 				<div class="product accessories blazers shoes trousers column">
 					<div class="img-product relative">
-						<a href="{{ item.route|abs_url }}"><img src="{{ item.image }}" class="img-responsive" alt=""></a>
+						{{ product_image_square(item.image) }}
 						<figure class="absolute uppercase label-new title-font text-center">yeni</figure>
 						<div class="product-icon absolute text-center">
 							<form method="post" action="/cart/add" enctype="multipart/form-data" class="inline-block icon-addcart">
@@ -72,7 +72,7 @@
 						</div>
 					</div>
 					<div class="info-product text-center">
-						<h4 class="des-font capital title-product space_top_20"><a href="#">{{ item.item_name }}</a></h4>
+						<h4 class="des-font capital title-product space_top_20"><a href="{{ item.route|abs_url }}">{{ item.item_name }}</a></h4>
 						<!--<p class="number-font"><span class="price">$123.00</span></p>-->
 					</div>
 				</div>
