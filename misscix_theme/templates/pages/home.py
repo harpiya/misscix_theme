@@ -4,13 +4,12 @@
 # @Project: Harpiya Kurumsal Yönetim Sistemi
 # @Filename: home.py
 # @Last modified by:   developer
-# @Last modified time: 2019-01-03T14:23:35+03:00
+# @Last modified time: 2019-01-03T14:49:53+03:00
 # @License: MIT License. See license.txt
 # @Copyright: Harpiya Yazılım Teknolojileri
 
 from __future__ import unicode_literals
 import frappe
-from frappe.website.doctype.website_slideshow.website_slideshow import get_slideshow
 
 no_cache = 1
 no_sitemap = 1
@@ -35,6 +34,3 @@ def get_context(context):
 			})
 
 	context.homepage = homepage
-
-	if context.homepage.slideshow:
-		context.update(get_slideshow(self))
