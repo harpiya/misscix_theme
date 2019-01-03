@@ -1,0 +1,21 @@
+{% for page in footer_items %}
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 lastest-post">
+	{% if not page.parent_label -%}
+		<a {% if not page.child_items -%} href="{{ (page.url or '')|abs_url }}" {%- endif %}
+		{% if page.child_items %} onclick="return false;" {% endif %}
+		{{ page.target or ''}}>
+		{%- if page.child_items -%}
+			<h4 class="des-font space_bot_10 title-about-home1 text-left">{{ page.label }}</h4>
+			{%- for child in page.child_items -%}
+				<h5 class="title-font uppercase text-left">
+					<a href="{{ child.url | abs_url }}"
+										{% if child.target %}target="_blank"{% endif %}>{{ child.label }}</a>
+				</h5>
+			{%- endfor -%}
+		{%- else -%}
+		<h4 class="des-font space_bot_10 title-about-home1 text-left">{{ page.label }}</h4>
+		</a>
+		{%- endif -%}
+	{%- endif -%}
+	</div>
+{% endfor %}
