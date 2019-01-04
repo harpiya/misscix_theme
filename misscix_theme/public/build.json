@@ -1,0 +1,13 @@
+{
+    "css/misscix.min.css": [
+        "public/bootstrap.min.css",
+        "public/bootstrap-theme.min.css",
+        "public/themify-icons.css",
+        "public/zoa-font.css",
+        "public/font-family.css",
+        "public/slick.css",
+        "public/slick-theme.css",
+        "public/style-main.css",
+        "public/responsive.css"
+    ]
+}
