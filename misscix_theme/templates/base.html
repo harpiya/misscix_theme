@@ -74,8 +74,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="/assets/misscix_theme/js/function-main.js" defer=""></script>
 	{% endblock %}
 	<script type="text/javascript">
-    console.log(Cookies.get("cart_count"))
-  </script>
+	   window.onload = function(){
+	     var sepet = Cookies.get("cart_count");
+	     document.getElementById('sepet_say').appendChild(sepet);
+	   }
+	</script>
 {%- if js_globals is defined %}
 <script>
 	{%- for key, value in js_globals.iteritems() %}
