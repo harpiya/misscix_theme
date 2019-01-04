@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %} {{ title | striptags }} {% endblock %}</title>
-	<meta name="generator" content="frappe">
+	<meta name="generator" content="harpiya">
     {% block favicon %}
 	<link rel="shortcut icon"
 		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
@@ -52,9 +52,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
 	<script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
-	<script src="/assets/misscix_theme/js/bootstrap.min.js" defer=""></script>
-	<script src="/assets/misscix_theme/js/slick.min.js" defer=""></script>
-	<script src="/assets/misscix_theme/js/function-main.js" defer=""></script>
+	<script src="/assets/misscix_theme/js/misscix.min.js" defer=""></script>
 	{% endblock %}
 	<script type="text/JavaScript">
 	  var itemCount = Cookies.get("cart_count");
