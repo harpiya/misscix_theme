@@ -1,3 +1,17 @@
+/**
+ * @Author: Saadettin Yasir AKEL <developer>
+ * @Date:   2018-12-27T11:56:49+03:00
+ * @Email:  yasir@harpiya.com
+ * @Project: Harpiya Kurumsal Yönetim Sistemi
+ * @Filename: function-main.js
+ * @Last modified by:   developer
+ * @Last modified time: 2019-01-04T23:46:05+03:00
+ * @License: MIT License. See license.txt
+ * @Copyright: Harpiya Yazılım Teknolojileri
+ */
+
+
+
 $(document).ready(function(){
 	'use trick';
 	$('.slick-bestseller').slick({
@@ -78,7 +92,7 @@ $(document).ready(function(){
       }
     }
   ]
-  
+
   });
  // ---------end-----------
 	// ---------slide child home 1-------------
@@ -98,7 +112,7 @@ $(document).ready(function(){
       settings: {
         arrows: false,
         centerMode: true,
-        
+
         slidesToShow: 2
       }
     },
@@ -107,12 +121,12 @@ $(document).ready(function(){
       settings: {
         arrows: false,
         centerMode: true,
-        
+
         slidesToShow: 1
       }
     }
   ]
-  
+
   });
  // ---------end-----------
  // -----slide comment---------
@@ -123,7 +137,7 @@ $(document).ready(function(){
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
-  
+
 
   responsive: [
     {
@@ -155,7 +169,7 @@ $(document).ready(function(){
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
-  
+
 
   responsive: [
     {
@@ -163,7 +177,7 @@ $(document).ready(function(){
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
-        
+
       }
     },
     {
@@ -187,8 +201,8 @@ $(document).ready(function(){
 });
  // -----------end------------
  // -----------scroll top-----------
- $(window).scroll(function(){ 
-        if ($(this).scrollTop() > 50) { 
+ $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
             $('.gotop').removeClass("fade");
             $('.gotop').fadeIn();
              $('#menu-header').addClass('menu-fixed');
@@ -196,17 +210,17 @@ $(document).ready(function(){
              // --------social fixed------
              $('.social-fixed').css('bottom','50%');
  			// -----end------------
-        } else { 
-            $('.gotop').fadeOut(); 
+        } else {
+            $('.gotop').fadeOut();
              $('#menu-header').removeClass("menu-fixed");
              $('.social-fixed').css('bottom','15px');
              $('.menu-main-home5 ').css('float','right');
-        } 
-    }); 
-    $('.gotop').on("click",function(){ 
-        $("html, body").animate({ scrollTop: 0 }, 500); 
-        return false; 
-    }); 
+        }
+    });
+    $('.gotop').on("click",function(){
+        $("html, body").animate({ scrollTop: 0 }, 500);
+        return false;
+    });
 
     // -----------end----------
 
@@ -243,21 +257,21 @@ $(function(){
   		for (i = 0; i < x.length; i++) {
   		$('.column.trousers').addClass('show');
   		$('.column').not('.trousers').removeClass('show');
-  	}	
+  	}
   	for (i = 0; i < x.length; i++) {
   		$('.btn.trousers').addClass('active');
   		$('.btn').not('.trousers').removeClass('active');
-  	}	
+  	}
   	});
   	$('.btn.shoes').on('click',function(){
   		for (i = 0; i < x.length; i++) {
   		$('.column.shoes').addClass('show');
   		$('.column').not('.shoes').removeClass('show');
-  	}	
+  	}
   	for (i = 0; i < x.length; i++) {
   		$('.btn.shoes').addClass('active');
   		$('.btn').not('.shoes').removeClass('active');
-  	}	
+  	}
   	});
   	$('.btn.accessories').on('click',function(){
   		for (i = 0; i < x.length; i++) {
@@ -267,17 +281,17 @@ $(function(){
   	for (i = 0; i < x.length; i++) {
   		$('.btn.accessories').addClass('active');
   		$('.btn').not('.accessories').removeClass('active');
-  	}	
+  	}
   	});
   	$('.btn.all').on('click',function(){
   		for (i = 0; i < x.length; i++) {
   		$('.column').addClass('show');
-  		
+
   	}
   	for (i = 0; i < x.length; i++) {
   		$('.btn.all').addClass('active');
   		$('.btn').not('.all').removeClass('active');
-  	}	
+  	}
   	});
   });
     // ---------end------------
@@ -290,7 +304,7 @@ $(function(){
     });
     // ------------end------------
     // --------form cart----------
-    $('#btn-cart').on('click',function(){
+    $('#navLogin').on('click',function(){
     	$('.form-cart').css('right','0');
     	$('.overlay').css('opacity','1').css('visibility','visible');
     });
@@ -388,7 +402,7 @@ $(function(){
 	slidesToShow: 6,
 	speed: 500,
 	responsive: [
-  
+
     {
       breakpoint: 1200,
       settings: {
@@ -414,7 +428,7 @@ $(function(){
     // settings: "unslick"
     // instead of a settings object
   ]
-  	
+
   });
  // ---------end-----------
  // ---------slide brand home 4-------------
@@ -422,28 +436,28 @@ $(function(){
  	dots:false,
  	autoplay:true,
 	speed: 1500,
-	slidesPerRow: 6, 
+	slidesPerRow: 6,
   	rows: 3,
 	responsive: [
-  
+
     {
       breakpoint: 1200,
       settings: {
-        slidesPerRow: 4, 
-  		
+        slidesPerRow: 4,
+
       }
     },
     {
       breakpoint: 991,
       settings: {
-        slidesPerRow: 3, 
+        slidesPerRow: 3,
   		rows: 2,
       }
     },
     {
       breakpoint: 567,
       settings: {
-        slidesPerRow: 1, 
+        slidesPerRow: 1,
   		rows: 2,
       }
     },
@@ -451,20 +465,20 @@ $(function(){
     // settings: "unslick"
     // instead of a settings object
   ]
-  	
+
   });
  // ---------end-----------
  // ---------slide home 5-------------
   $('.slider-home5').slick({
  	dots:false,
- 	
+
  	infinite: true,
  	autoplay:false,
 	slidesToShow: 1,
 	speed: 1500,
 	fade: true,
 	asNavFor: '.slider-nav-home5',
-	
+
   responsive: [
     {
       breakpoint: 768,
@@ -479,7 +493,7 @@ $(function(){
       }
     }
   ]
-  
+
   });
   // ---------end-----------
   // ---------slide nav home 5-------------
@@ -492,7 +506,7 @@ $(function(){
 	speed: 1500,
 	fade: false,
 	asNavFor: '.slider-home5',
-	
+
   responsive: [
     {
       breakpoint: 768,
@@ -501,7 +515,7 @@ $(function(){
       }
     }
   ]
-  
+
   });
   // ---------end-----------
   // ---------slide  home 6-------------
@@ -519,27 +533,27 @@ $(function(){
  	dots:false,
  	autoplay:false,
 	speed: 1000,
-	slidesPerRow: 4, 
+	slidesPerRow: 4,
   	rows: 2,
 	responsive: [
-  
+
     {
       breakpoint: 1200,
       settings: {
-        slidesPerRow: 3, 
-  		
+        slidesPerRow: 3,
+
       }
     },
     {
       breakpoint: 991,
       settings: {
-        slidesPerRow: 2, 
+        slidesPerRow: 2,
       }
     },
     {
       breakpoint: 567,
       settings: {
-        slidesPerRow: 1, 
+        slidesPerRow: 1,
   		rows: 2,
       }
     },
@@ -547,7 +561,7 @@ $(function(){
     // settings: "unslick"
     // instead of a settings object
   ]
-  	
+
   });
  // ---------end-----------
  // -----slide product home 6---------
@@ -558,7 +572,7 @@ $(function(){
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
-  
+
 
   responsive: [
     {
@@ -608,33 +622,33 @@ $(function(){
  	dots:false,
  	autoplay:false,
 	speed: 1000,
-	slidesPerRow: 5, 
+	slidesPerRow: 5,
   	rows: 2,
 	responsive: [
   	{
       breakpoint: 1600,
       settings: {
-        slidesPerRow: 4, 
-  		
+        slidesPerRow: 4,
+
       }
     },
     {
       breakpoint: 1400,
       settings: {
-        slidesPerRow: 3, 
-  		
+        slidesPerRow: 3,
+
       }
     },
     {
       breakpoint: 991,
       settings: {
-        slidesPerRow: 2, 
+        slidesPerRow: 2,
       }
     },
     {
       breakpoint: 567,
       settings: {
-        slidesPerRow: 1, 
+        slidesPerRow: 1,
   		rows: 2,
       }
     },
@@ -642,7 +656,7 @@ $(function(){
     // settings: "unslick"
     // instead of a settings object
   ]
-  	
+
   });
  // ---------end-----------
  // ------accordion--------
@@ -657,7 +671,7 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = null;
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
+    }
   });
 }
 // ---------end-----------
