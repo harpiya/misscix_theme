@@ -82,6 +82,17 @@ window.{{ key }} = "{{ value[0] }}";
 {%- block script %}{%- endblock %}
 <!-- csrf_token -->
 {%- block body_include %}{{ body_include or "" }}{% endblock -%}
+<script>
+frappe.call({
+					method: 'erpnext.shopping_cart.cart.get_shopping_cart_menu',
+					callback: function(r) {
+						if (r.message) {
+							$('.shopping-cart-nav').html(r.message);
+							console.log($(data));
+						}
+					}
+});
+</script>
 <script type="application/ld+json">
     {
         "@context": "http://schema.org",
