@@ -33,26 +33,6 @@
 			<div class="col-md-12">
 			{% if homepage.products %}
 				<h1 class="title-font capital margin_bottom_10 title-bestseller">{{ _("Featured Products") }}</h1>
-			<div id="btn-selection" class="title-font margin_bottom_50">
-				<button class="btn all active uppercase btn-default relative margin_right_15">tümü
-				<figure class="line active_line absolute delay03"></figure>
-				</button>
-				<button class="btn blazers uppercase btn-default relative margin_right_15">bluz
-					<figure class="line absolute delay03"></figure>
-				</button>
-				<button class="btn jackets uppercase btn-default relative margin_right_15">ceket
-					<figure class="line absolute delay03"></figure>
-				</button>
-				<button class="btn trousers uppercase btn-default relative margin_right_15">triko
-					<figure class="line absolute delay03"></figure>
-				</button>
-				<button class="btn shoes uppercase btn-default relative margin_right_15">elbise
-					<figure class="line absolute delay03"></figure>
-				</button>
-				<button class="btn accessories uppercase btn-default relative margin_right_15">etek
-					<figure class="line absolute delay03"></figure>
-				</button>
-			</div>
 			<div class="slick-bestseller-home7">
 				{% for item in homepage.products %}
 				<div class="product accessories jackets blazers trousers column">
