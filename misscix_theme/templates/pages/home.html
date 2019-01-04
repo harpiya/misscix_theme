@@ -56,7 +56,7 @@
 			<div class="slick-bestseller-home7">
 				{% for item in homepage.products %}
 				<div class="product accessories jackets blazers trousers column">
-					<a href="{{ route|abs_url }}">
+					<a href="{{ item.route|abs_url }}">
 						<div class="img-product relative">
 							{{ product_image_square(item.image) }}
 							<figure class="absolute uppercase label-new title-font text-center">yeni</figure>
