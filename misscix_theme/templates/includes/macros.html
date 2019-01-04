@@ -3,7 +3,7 @@
 	<meta itemprop="image" content="{{ frappe.utils.quoted(website_image) | abs_url }}"></meta>
 {%- endif %}
 {% if website_image -%}
-<a href="#"><img src="{{ frappe.utils.quoted(website_image) | abs_url }}" width="330px" class="img-responsive" alt="{{ item_name }}"></a>
+<a href="{{ route|abs_url }}"><img src="{{ frappe.utils.quoted(website_image) | abs_url }}" width="330px" class="img-responsive" alt="MissCix Koleksiyon"></a>
 {%- endif %}
 {% endmacro %}
 
