@@ -15,6 +15,13 @@
 		href="{{ (favicon or "/assets/misscix_theme/img/favicon.png") | abs_url }}"
 		type="image/x-icon">
 	{% endblock %}
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5BCZXB6');</script>
+	<!-- End Google Tag Manager -->
 	{%- block head -%}
 	{% block meta_block %}{% endblock %}
 	<link rel="stylesheet" type="text/css" href="/assets/misscix_theme/css/bootstrap.min.css">
@@ -46,6 +53,10 @@
 	</script>
 </head>
 <body data-path="{{ path }}">
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BCZXB6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 	{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
 	{% block content %}
 	{{ content }}
@@ -74,6 +85,33 @@ window.{{ key }} = "{{ value[0] }}";
 {%- block script %}{%- endblock %}
 <!-- csrf_token -->
 {%- block body_include %}{{ body_include or "" }}{% endblock -%}
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Miss Cix",
+        "url": "https://www.misscix.com.tr",
+        "logo": "https://www.misscix.com.tr/assets/misscix_theme/img/misscix-logo.png",
+        "contactPoint": [{
+            "@type": "ContactPoint",
+            "telephone": "+90 212 505 0583",
+            "contactType": "customer service"
+        }],
+        "sameAs": ["https://www.facebook.com/ADEM.DEMIRBAS.MISSCIX",
+            "https://instagram.com/misscixfashion",
+            "https://plus.google.com/+NiNetTrDatacenter"
+        ]
+    }
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121614793-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121614793-3');
+</script>
 <script type="text/javascript" src="/assets/misscix_theme/js/misscix_theme.js"></script>
 </body>
 </html>
