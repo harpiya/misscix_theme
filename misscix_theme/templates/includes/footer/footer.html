@@ -43,7 +43,17 @@
 			<p class="des-font">Alışveriş sepetinize henüz ürün eklemediniz.</p>
 			<div id="cart-overlay" class="dropdown-menu shopping-cart-menu"></div>
 			<a href="/products" class="capital des-font">alışverişe başla</a>
-			<div id="cart-overlay" class="shopping-cart-menu"></div>
+			<div id="cart-overlay" class="shopping-cart-nav"></div>
 		</div>
-
 	</div>
+
+	<script>
+		frappe.call({
+						method: 'erpnext.shopping_cart.cart.get_shopping_cart_menu',
+						callback: function(r) {
+							if (r.message) {
+								$('.shopping-cart-nav').html(r.message);
+							}
+						}
+					});
+	</script>
