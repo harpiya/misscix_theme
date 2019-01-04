@@ -48,7 +48,7 @@
 	</div>
 
 	<script>
-		$.frappe.call({
+	frappe.call({
 						method: 'erpnext.shopping_cart.cart.get_shopping_cart_menu',
 						callback: function(r) {
 							if (r.message) {
@@ -56,5 +56,5 @@
 								console.log($(data));
 							}
 						}
-					});
+	});
 	</script>
