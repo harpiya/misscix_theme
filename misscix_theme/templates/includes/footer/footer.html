@@ -30,8 +30,8 @@
 
                         	<i class="ti-close" id="close-search"></i>
                             <h3 class="text-center title-font">sizin için<br>ne aramamı istersiniz ?</h3>
-                            <form method="get" action="/search" role="search">
-                              <input type="text" class="form-control control-search des-font" value="" autocomplete="off" placeholder="Lütfen aramak istediğiniz ürün adını veya modeli yazın ..." aria-label="SEARCH" name="q">
+                            <form method="get" action="/product_search" role="search">
+                              <input type="text" class="form-control control-search des-font" value="" autocomplete="off" placeholder="Lütfen aramak istediğiniz ürün adını veya modeli yazın ..." aria-label="SEARCH" name="search">
                               <button class="button_search title-font" type="submit">ara</button>
                             </form>
 
@@ -41,7 +41,8 @@
 		<h3 class="title-font capital">sepetim</h3>
 		<div class="empty-cart">
 			<p class="des-font">Alışveriş sepetinize henüz ürün eklemediniz.</p>
-			<a href="#" class="capital des-font">alışverişe başla</a>
+			<div id="cart-overlay" class="dropdown-menu shopping-cart-menu"></div>
+			<a href="/products" class="capital des-font">alışverişe başla</a>
 		</div>
 
 	</div>
