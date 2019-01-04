@@ -4,7 +4,7 @@
 # @Project: Harpiya Kurumsal Yönetim Sistemi
 # @Filename: home.py
 # @Last modified by:   developer
-# @Last modified time: 2019-01-03T15:17:25+03:00
+# @Last modified time: 2019-01-05T00:16:07+03:00
 # @License: MIT License. See license.txt
 # @Copyright: Harpiya Yazılım Teknolojileri
 
@@ -30,7 +30,8 @@ def get_context(context):
 			homepage.append('products', {
 				'item_code': 'product-{0}'.format(i),
 				'item_name': frappe._('Product {0}').format(i),
+				'item_price': '#',
 				'route': '#'
-			})		
+			})
 
 	context.homepage = homepage
