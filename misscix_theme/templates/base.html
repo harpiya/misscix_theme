@@ -74,12 +74,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="/assets/misscix_theme/js/function-main.js" defer=""></script>
 	{% endblock %}
 	<script type="text/JavaScript">
-	  $(document).ready(function() {
-	     if (Cookies.get("cart_count") == 'yes') {
-	      $('.shopping-cart').removeClass('hidden');
-	      $('.label-cart').prepend($( Cookies.get("cart_count") ));
-	    }
-	  });			
+	  var itemCount = Cookies.get("cart_count");
+		$('#sepet_say').html(itemCount).css('display', 'block');
+		console.log(Cookies.get("cart_count"));
 	</script>
 {%- if js_globals is defined %}
 <script>
