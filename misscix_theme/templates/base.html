@@ -73,11 +73,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="/assets/misscix_theme/js/slick.min.js" defer=""></script>
 	<script src="/assets/misscix_theme/js/function-main.js" defer=""></script>
 	{% endblock %}
-	<script type="text/javascript">
-	   window.onload = function(){
-	     var sepet = Cookies.get("cart_count");
-	     document.getElementById('sepet_say').appendTo(sepet);
-	   }
+	<script type="text/JavaScript">
+	  $(document).ready(function() {
+	     if (Cookies.get("cart_count") == 'yes') {
+	      $('.shopping-cart').removeClass('hidden');
+	      $('.label-cart').prepend($( Cookies.get("cart_count") ));
+	    }
+	  });			
 	</script>
 {%- if js_globals is defined %}
 <script>
