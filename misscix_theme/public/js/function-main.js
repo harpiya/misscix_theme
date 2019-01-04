@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: function-main.js
  * @Last modified by:   developer
- * @Last modified time: 2019-01-05T02:00:58+03:00
+ * @Last modified time: 2019-01-05T02:04:02+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -334,13 +334,13 @@ $(function(){
 	        $('.menu-mobile-left-content').hide();
 	        $('#slide-bar-category').hide();
 					frappe.call({
-									method: 'erpnext.shopping_cart.cart.get_shopping_cart_menu',
-									callback: function(r) {
-										if (r.message) {
-											$('.shopping-cart-nav').html(r.message);
-										}
-									}
-				});					
+						method: 'erpnext.shopping_cart.cart.get_shopping_cart_menu',
+						callback: function(r) {
+						if (r.message) {
+							$('.shopping-cart-nav').html(r.message);
+						}
+					}
+				});
 	    });
 	    $(".wrappage").on("click", function() {
 	        $(this).removeClass('active');

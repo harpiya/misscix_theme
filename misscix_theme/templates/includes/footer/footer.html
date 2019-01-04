@@ -46,3 +46,15 @@
 			<div id="cart-overlay" class="shopping-cart-nav"></div>
 		</div>
 	</div>
+
+	<script>
+		$.frappe.call({
+						method: 'erpnext.shopping_cart.cart.get_shopping_cart_menu',
+						callback: function(r) {
+							if (r.message) {
+								$('.shopping-cart-nav').html(r.message);
+								console.log($(data));
+							}
+						}
+					});
+	</script>
