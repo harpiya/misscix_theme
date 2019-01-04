@@ -68,10 +68,14 @@
 			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-7 text-right icon-main">
 				<a href="#" class="link-menu delay03 container_20 inline-block hidden-xs hidden-sm" id="btn-search"><i class="ti-search"></i></a>
         {% include("misscix_theme/templates/includes/navbar/navbar_login.html") %}
-				<a href="#" class="link-menu delay03 container_20 relative inline-block text-center shopping-cart">
-					<i class="ti-bag"></i>
-					<figure class="absolute label-cart number-font" id="sepet_say"></figure>
-				</a>
+        <li class="shopping-cart hidden">
+      		<div class="cart-icon">
+      			<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+      				{{ _("Cart") }} <span class="badge-wrapper" id="cart-count"></span>
+      			</a>
+      			<div id="cart-overlay" class="dropdown-menu shopping-cart-menu"></div>
+      		</div>
+      	 </li>
 				<a href="#" class="link-menu delay03 inline-block hidden-md hidden-lg space_left_10 btn-push-menu">
 					<svg width="26" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 66 41" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
                                     <g>
