@@ -65,15 +65,14 @@
 									<input type="hidden" name="id" value="" />
 									<button type="submit" name="add" class="enj-add-to-cart-btn btn-default"><i class="ti-bag"></i></button>
 								</form>
-								<a href="#" class="icon-heart inline-block"><i class="ti-heart"></i></a>
-								<a href="#" class="engoj_btn_quickview icon-quickview inline-block" title="quickview">
+								<a href="{{ item.route|abs_url }}" class="engoj_btn_quickview icon-quickview inline-block" title="quickview">
 										<i class="ti-more-alt"></i>
 									</a>
 						</div>
 					</div>
 					<div class="info-product text-center">
 						<h4 class="des-font capital title-product space_top_20"><a href="{{ item.route|abs_url }}">{{ item.item_name }}</a></h4>
-						<!--<p class="number-font"><span class="price">$123.00</span></p>-->
+						<p class="number-font"><span class="price">{{ item.item_price }}</span></p>
 					</div>
 				</div>
 				<!--  -->
