@@ -72,6 +72,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="/assets/misscix_theme/js/slick.min.js" defer=""></script>
 	<script src="/assets/misscix_theme/js/function-main.js" defer=""></script>
 	{% endblock %}
+	<script type="text/javascript">
+    console.debug($.cookie("visits"))
+  </script>
 {%- if js_globals is defined %}
 <script>
 	{%- for key, value in js_globals.iteritems() %}
