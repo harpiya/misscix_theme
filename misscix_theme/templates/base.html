@@ -74,7 +74,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="/assets/misscix_theme/js/function-main.js" defer=""></script>
 	{% endblock %}
 	<script type="text/JavaScript">
-	  var itemCount = Cookies.get("cart_count");
+	  sepet_sayi = Cookies.get("cart_count");
+		var itemCount = setInterval(sepet_say, 1000);
 		$('#sepet_say').html(itemCount).css('display', 'block');
 		console.log(Cookies.get("cart_count"));
 	</script>
