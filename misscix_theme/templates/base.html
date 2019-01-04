@@ -1,56 +1,39 @@
 <!DOCTYPE html>
 <!-- Built on Harpiya. https://harpiya.com/ -->
-<html lang="tr">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>{% block title %} {{ title | striptags }} {% endblock %}</title>
-	<meta name="generator" content="harpiya">
-	{% block favicon %}
+	<meta name="generator" content="frappe">
+    {% block favicon %}
 	<link rel="shortcut icon"
-		href="{{ (favicon or "/assets/misscix_theme/img/favicon.png") | abs_url }}"
+		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
 		type="image/x-icon">
 	<link rel="icon"
-		href="{{ (favicon or "/assets/misscix_theme/img/favicon.png") | abs_url }}"
+		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
 		type="image/x-icon">
-	{% endblock %}
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-5BCZXB6');</script>
-	<!-- End Google Tag Manager -->
+	<link rel="stylesheet" type="text/css" href="/assets/misscix_theme/css/misscix.min.css">
+    {% endblock %}
 	{%- block head -%}
-	{% block meta_block %}{% endblock %}
-	<link rel="stylesheet" type="text/css" href="/assets/misscix_theme/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/assets/misscix_theme/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" type="text/css" href="/assets/misscix_theme/css/themify-icons.css">
-	<link rel="stylesheet" type="text/css" href="/assets/misscix_theme/css/zoa-font.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/misscix_theme/css/font-family.css">
-	<link rel="stylesheet" type="text/css" href="/assets/misscix_theme/css/slick.css">
-	<link rel="stylesheet" type="text/css" href="/assets/misscix_theme/css/slick-theme.css">
-	<link rel="stylesheet" type="text/css" href="/assets/misscix_theme/css/style-main.css">
-	<link rel="stylesheet" type="text/css" href="/assets/misscix_theme/css/responsive.css">
-	<!-- {% if path == 'login' or template == 'website/doctype/web_form/templates/web_form.html' %}
-	<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
-	{% endif %} -->
-	<style>
-		{% include "templates/includes/custom.css" ignore missing %}
-	</style>
+		{% block meta_block %}{% endblock %}
+		{% if head_html is defined -%}
+		{{ head_html or "" }}
+		{%- endif %}
+		{%- for link in web_include_css %}
+		<link type="text/css" rel="stylesheet" href="{{ link|abs_url }}">
+		{%- endfor -%}
+	    {%- block head_include %}{{ head_include or "" }}{% endblock -%}
+		{%- block style %}{%- endblock -%}
 	{%- endblock -%}
-	{%- block head_include %}{{ head_include or "" }}{% endblock -%}
-	{%- block style %}{%- endblock -%}
-	<script>
-	window.frappe = {};
-	frappe.ready_events = [];
-	frappe.ready = function(fn) {
-	frappe.ready_events.push(fn);
-	}
-	window.dev_server = {{ dev_server }};
-	</script>
+    <script>
+		window.frappe = {};
+		frappe.ready_events = [];
+		frappe.ready = function(fn) {
+			frappe.ready_events.push(fn);
+		}
+		window.dev_server = {{ dev_server }};
+    </script>
 </head>
 <body data-path="{{ path }}">
 	<!-- Google Tag Manager (noscript) -->
@@ -109,15 +92,6 @@ window.{{ key }} = "{{ value[0] }}";
             "https://plus.google.com/+NiNetTrDatacenter"
         ]
     }
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121614793-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-121614793-3');
 </script>
 </body>
 </html>
