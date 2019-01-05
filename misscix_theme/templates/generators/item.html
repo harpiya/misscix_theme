@@ -55,28 +55,35 @@
 			<p class="item-price hide price margin_bottom_10" itemprop="price"></p>
 			<div class="item-stock hide number-font capital" itemprop="availability"></div>
 			<p>Pul Payet Mini Boy Elbise paket içeriği 5 adet seriden oluşmaktadır.</p>
-			{% if has_variants and attributes %}
-			{% for d in attributes %}
-			{% if attribute_values[d.attribute] -%}
 			<div class="margin_bottom_30">
-				<h6 class="text-muted">{{ _(d.attribute) }}</h6>
-				<select class="menu-font"
-					data-attribute="{{ d.attribute }}">
-				{% for value in attribute_values[d.attribute] %}
-				<option class="capital" value="{{ value }}"
-				{% if selected_attributes and selected_attributes[d.attribute]==value -%}
-					selected
-				{%- elif disabled_attributes and value in disabled_attributes.get(d.attribute, []) -%}
-					disabled
-				{%- endif %}>
-					{{ _(value) }}
-				</option>
+				{% if has_variants and attributes %}
+
+				{% for d in attributes %}
+				{% if attribute_values[d.attribute] -%}
+				<div class="item-view-attribute {% if (attribute_values[d.attribute] | len)==1 -%} hidden {%- endif %}"
+						style="margin-bottom: 10px;">
+					<h6 class="text-muted">{{ _(d.attribute) }}</h6>
+					<select class="form-control"
+						style="max-width: 140px"
+						data-attribute="{{ d.attribute }}">
+					{% for value in attribute_values[d.attribute] %}
+					<option value="{{ value }}"
+					{% if selected_attributes and selected_attributes[d.attribute]==value -%}
+						selected
+					{%- elif disabled_attributes and value in disabled_attributes.get(d.attribute, []) -%}
+						disabled
+					{%- endif %}>
+						{{ _(value) }}
+					</option>
+					{% endfor %}
+					</select>
+				</div>
+				{%- endif %}
 				{% endfor %}
-				</select>
+
+				{% endif %}
 			</div>
-			{% endif %}
-			{% endfor %}
-			{% endif %}
+
 			<div class="flex margin_bottom_50 border-bot space_bot_10 btn-function item-cart">
 				<div id="item-spinner" class="input-number-group margin_right_10">
 					<div class="relative input-number-custom number-spinner">
