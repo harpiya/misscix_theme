@@ -5,7 +5,7 @@
 # @Project: Harpiya Kurumsal Yönetim Sistemi
 # @Filename: hooks.py
 # @Last modified by:   developer
-# @Last modified time: 2019-01-04T22:59:34+03:00
+# @Last modified time: 2019-01-05T11:37:37+03:00
 # @License: MIT License. See license.txt
 # @Copyright: Harpiya Yazılım Teknolojileri
 
@@ -33,7 +33,7 @@ hide_in_installer = True
 # app_include_js = "/assets/misscix_theme/js/misscix_theme.js"
 
 # include js, css files in header of web template
-web_include_css = "/assets/css/misscix.min.css"
+# web_include_css = "/assets/css/misscix.min.css"
 # web_include_js = "/assets/misscix_theme/js/misscix_theme.js"
 
 # Installation
