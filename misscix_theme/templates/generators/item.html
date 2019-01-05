@@ -85,12 +85,12 @@
 				<form id="item-add-to-cart" class="inline-block icon-addcart">
   						 <button class="enj-add-to-cart-btn btn-default menu-font uppercase">sepete ekle</button>
   			</form>
-				<div id="item-update-cart" style="display: none;">
-					<a href="/cart" class=''>
-						<i class='octicon octicon-check'></i>
-						{{ _("View in Cart") }}</a>
-				</div>
 			</div>
+			<div id="item-update-cart" style="display: none;">
+				<a href="/cart" class='btn btn-sm btn-default'>
+					<i class='octicon octicon-check'></i>
+					{{ _("View in Cart") }}</a>
+			</div>			
 			<!--  -->
 			<div class="info-more">
 				<p class="des-font margin_bottom_30 margin_top_50"><b class="menu-font">{{ _("Item Code") }}:</b> <span itemprop="productID">{{ variant and variant.name or name }}</span></p>
