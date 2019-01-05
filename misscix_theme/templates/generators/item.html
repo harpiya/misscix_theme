@@ -89,16 +89,13 @@
 						<i class='octicon octicon-check'></i>
 						{{ _("View in Cart") }}</a>
 				</div>
-				<form class="inline-block icon-addcart">
-  							  <button type="submit" name="add" class="enj-add-to-cart-btn btn-default menu-font uppercase">sepete ekle</button>
+				<form id="item-add-to-cart" class="inline-block icon-addcart">
+  						 <button class="enj-add-to-cart-btn btn-default menu-font uppercase">sepete ekle</button>
   			</form>
 			</div>
 			<!--  -->
 			<div class="info-more">
 				<p class="des-font margin_bottom_30 margin_top_50"><b class="menu-font">{{ _("Item Code") }}:</b> <span itemprop="productID">{{ variant and variant.name or name }}</span></p>
-				<p class="text-muted">
-					{{ _("Item Code") }}: <span itemprop="productID">{{ variant and variant.name or name }}</span>
-				</p>
 				<p class="margin_bottom_30">
 					<span class="menu-font margin_right_10">Seri</span>
 					<a href="#" class="delay03 margin_right_10">S,</a>
