@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: cart.js
  * @Last modified by:   developer
- * @Last modified time: 2019-01-05T12:16:40+03:00
+ * @Last modified time: 2019-01-05T13:30:00+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -73,7 +73,7 @@ $.extend(shopping_cart, {
 			shopping_cart.shopping_cart_update(item_code, newVal);
 		});
 
-		$(".cart-items").on('click', '.number-spinner button', function () {
+		$(".cart-items").on('click', '.number-spinner span', function () {
 			var btn = $(this),
 				input = btn.closest('.number-spinner').find('input'),
 				oldValue = input.val().trim(),
