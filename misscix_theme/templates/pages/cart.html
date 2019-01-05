@@ -39,7 +39,18 @@
 			<div id="cart-error" class="alert alert-danger"
 		style="display: none;"></div>
 		<div id="cart-items">
-        {{ _("Item") }}
+      <div class="table-responsive">
+          <table class="table cart-table">
+              <thead>
+                  <tr class="number-font">
+                      <th class="product-thumbnail uppercase">{{ _("Item") }}</th>
+                      <th class="product-name uppercase">Description</th>
+                      <th class="product-price uppercase">Price</th>
+                      <th class="product-quantity uppercase">{{ _("Qty") }}</th>
+                      <th class="product-subtotal uppercase">{{ _("Subtotal") }}</th>
+                  </tr>
+              </thead>
+      </div>
 			<div class="row cart-item-header text-muted">
 				<div class="col-sm-8 col-xs-6 h6 text-uppercase product-thumbnail ">
 				{{ _("Item") }}
