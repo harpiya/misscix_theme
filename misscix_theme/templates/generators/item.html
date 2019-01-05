@@ -104,64 +104,61 @@
 					</div>
 				</div>
 			</div>
-			<div class="tab-content-detail container margin_bottom_150">
-				<div class="border-bot space_bot_100">
-						<ul class="nav nav-tabs btn-tab-product-detail margin_bottom_100">
-						  <li class="active"><a data-toggle="tab" href="#home" class=" menu-font btn-tab relative">Açıklama<figure class="line"></figure></a></li>
-						  <li class="container_60"><a data-toggle="tab" href="#menu1" class=" menu-font btn-tab relative">Ödeme, Kargo ve İade Koşulları<figure class="line"></figure></a></li>
-						  <li><a data-toggle="tab" href="#menu2" class=" menu-font btn-tab relative">Müşteri Yorumları (0)<figure class="line"></figure></a></li>
-						</ul>
-						<div class="tab-content">
-			  				<div id="home" class="tab-pane fade in active">
-			  				  	<p class="des-font des-tab">Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior. Tonal patent coated
-								interior. Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior. Tonal patent
-								coated interior.<br><br></p>
-								<ul class="space_left_20 des-font des-tab">
-									<li>Leather</li>
-									<li>Made in Italy</li>
-								</ul>
-								<h2 class="menu-font btn-tab">Features:</h2>
-								<ul class="space_left_20 des-font des-tab">
-									<li>Compatible for indoor and outdoor use</li>
-									<li>Wide polypropylene shell seat for unrivalled comfort</li>
-									<li>Rust-resistant frame</li>
-									<li>Durable UV and weather-resistant construction</li>
-									<li>Shell seat features water draining recess</li>
-									<li>Shell and base are stackable for transport</li>
-									<li>Choice of monochrome finishes and colourways</li>
-									<li>Designed by Nagi</li>
-								</ul>
-			  				</div>
-			  				<div id="menu1" class="tab-pane fade">
-				  				<p class="des-font des-tab">Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top
-								handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior.
-								Tonal patent coated interior.<br><br></p>
-								<ul class="space_left_20 des-font des-tab">
-									<li>Leather</li>
-									<li>Made in Italy</li>
-								</ul>
-			  				</div>
-			  				<div id="menu2" class="tab-pane fade">
-			  					<div class="row">
-			  				  	<div class="review margin_bottom_50 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-						  			<h1 class="menu-font title-review">Yorumlar</h1>
-						  			<p class="des-font content-review">Henüz yorum yapılmamış</p>
-						  		</div>
-						  		<div class="form-review col-lg-6 col-md-6 col-sm-6 col-xs-6">
-						  			<h1 class="menu-font title-form">“Pul Payet Mini Boy Elbise“ için ilk yorumu siz yapın </h1>
-						  			<p class="des-font des-review margin_bottom_50">E-posta hesabınız yayımlanmayacak. * işaretli alanların doldurulması gerekir.</p>
-						  			<form>
-						  				<input type="text" name="name" placeholder="Adınız Soyadınız*" class="margin_bottom_20 des-font">
-						  				<input type="email" name="EMAIL" placeholder="E-posta adresiniz*" class="margin_bottom_20 des-font">
-						  				<textarea placeholder="Mesajınız*" class="margin_bottom_20 des-font"></textarea>
-						  				<button type="submit" class="menu-font uppercase">gönder</button>
-						  			</form>
-						  		</div>
-						  		</div>
-						</div>
-			  				</div>
-						</div>
 
+			<div class="row item-website-description margin-top">
+				<div class="col-md-12">
+					<div class="h6 text-uppercase">{{ _("Description") }}</div>
+					<div itemprop="description" class="item-desc">
+					{{ web_long_description or description or _("No description given") }}
+					</div>
+				</div>
+			</div>
+			{% if website_specifications -%}
+			<div class="row item-website-specification margin-top">
+				<div class="col-md-12">
+					<div class="h6 text-uppercase">{{ _("Specifications") }}</div>
+
+					<table class="table">
+					{% for d in website_specifications -%}
+						<tr>
+							<td class="text-muted" style="width: 30%;">{{ d.label }}</td>
+							<td>{{ d.description }}</td>
+						</tr>
+					{%- endfor %}
+					</table>
+				</div>
+			</div>
+			{%- endif %}
+		</div>
+	</div>
+</div>
+<div class="tab-content-detail container margin_bottom_150">
+	<div class="border-bot space_bot_100">
+		<ul class="nav nav-tabs btn-tab-product-detail margin_bottom_100">
+			<li class="active"><a data-toggle="tab" href="#home" class=" menu-font btn-tab relative">{{ _("Description") }}<figure class="line"></figure></a></li>
+			<li class="container_60"><a data-toggle="tab" href="#menu1" class=" menu-font btn-tab relative">Ödeme, Kargo ve İade Koşulları<figure class="line"></figure></a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="home" class="tab-pane fade in active">
+				<p class="des-font des-tab">{{ web_long_description or description or _("No description given") }}</p>
+				{% if website_specifications -%}
+				<h2 class="menu-font btn-tab">{{ _("Specifications") }}:</h2>
+				<ul class="space_left_20 des-font des-tab">
+					{% for d in website_specifications -%}
+					<li><span>{{ d.label }}: {{ d.description }}</span></li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			</div>
+  		<div id="menu1" class="tab-pane fade">
+				<p class="des-font des-tab">Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top
+					handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior.
+					Tonal patent coated interior.<br><br></p>
+				<ul class="space_left_20 des-font des-tab">
+					<li>Leather</li>
+					<li>Made in Italy</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
