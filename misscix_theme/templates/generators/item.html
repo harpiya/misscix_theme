@@ -71,7 +71,8 @@
 			{% endfor %}
 			{% endif %}
 			<div class="flex margin_bottom_50 border-bot space_bot_10 btn-function item-cart">
-				<div id="item-spinner" class="input-number-group">
+				<div id="item-spinner" class="input-number-group mr-4">
+					<div class="relative input-number-custom number-spinner">
 					<div class="input-group-button absolute down-btn">
 						<span class="input-number-decrement ti-angle-down cart-btn" data-dir="dwn"></span>
 					</div>
@@ -79,15 +80,16 @@
 					<div class="input-group-button absolute up-btn">
 						<span class="input-number-increment ti-angle-up cart-btn" data-dir="up"></span>
 					</div>
+					</div>
 				</div>
 				<form id="item-add-to-cart" class="inline-block icon-addcart">
   				<button class="enj-add-to-cart-btn btn-default menu-font uppercase">sepete ekle</button>
   			</form>
-			</div>
-			<div id="item-update-cart" style="display: none;">
-				<a href="/cart" class='btn btn-sm btn-default'>
-					<i class='octicon octicon-check'></i>
-					{{ _("View in Cart") }}</a>
+				<div id="item-update-cart" style="display: none;">
+					<a href="/cart" class='btn btn-sm btn-nixx number-font'>
+						<i class='octicon octicon-check white'></i>
+						{{ _("View in Cart") }}</a>
+				</div>
 			</div>
 			<!--  -->
 			<div class="info-more">
