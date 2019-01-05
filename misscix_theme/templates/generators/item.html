@@ -104,31 +104,6 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="row item-website-description margin-top">
-				<div class="col-md-12">
-					<div class="h6 text-uppercase">{{ _("Description") }}</div>
-					<div itemprop="description" class="item-desc">
-					{{ web_long_description or description or _("No description given") }}
-					</div>
-				</div>
-			</div>
-			{% if website_specifications -%}
-			<div class="row item-website-specification margin-top">
-				<div class="col-md-12">
-					<div class="h6 text-uppercase">{{ _("Specifications") }}</div>
-
-					<table class="table">
-					{% for d in website_specifications -%}
-						<tr>
-							<td class="text-muted" style="width: 30%;">{{ d.label }}</td>
-							<td>{{ d.description }}</td>
-						</tr>
-					{%- endfor %}
-					</table>
-				</div>
-			</div>
-			{%- endif %}
 		</div>
 	</div>
 </div>
