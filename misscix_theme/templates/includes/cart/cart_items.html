@@ -6,6 +6,9 @@
 <td class="product-name">
 {{ item_name_and_description(d) }}
 </td>
+<td class="total-price">
+  <p class="price">{{ d.get_formatted("rate") }}</p>
+</td>
 <td class="btn-fuction">
     <div class="input-number-group col-qty">
         <div class="relative input-number-custom number-spinner">
@@ -27,7 +30,5 @@
 </td>
 <td class="total-price">
   <p class="price">{{ d.get_formatted("amount") }}</p>
-  <p class="text-muted small item-rate">{{
-      _("Rate: {0}").format(d.get_formatted("rate")) }}</p>
 </td>
 {% endfor %}
