@@ -36,8 +36,6 @@
 		{%- for link in web_include_css %}
 		<link type="text/css" rel="stylesheet" href="{{ link|abs_url }}">
 		{%- endfor -%}
-		<link rel="stylesheet" href="/assets/misscix_theme/css/slick.css">
-		<link rel="stylesheet" href="/assets/misscix_theme/css/slick-theme.css">
 		<link rel="stylesheet" href="/assets/misscix_theme/css/themify-icons.css">
 		<link rel="stylesheet" href="/assets/misscix_theme/css/zoa-font.css">
 		<link rel="stylesheet" href="/assets/misscix_theme/css/font-family.css">
@@ -69,12 +67,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js"></script>
 	<script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
-	<script src="/assets/misscix_theme/js/bootstrap.min.js" defer=""></script>
-	<script src="/assets/misscix_theme/js/slick.min.js" defer=""></script>
-	<script src="/assets/misscix_theme/js/function-main.js" defer=""></script>
-	<script src="/assets/misscix_theme/js/function-select-custom.js" defer=""></script>
-	<script src="/assets/misscix_theme/js/function-input-number.js" defer=""></script>
-
+	<script src="/assets/js/misscix.min.js" defer=""></script>
 	{% endblock %}
 {%- if js_globals is defined %}
 <script>
