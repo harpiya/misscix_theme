@@ -13,7 +13,8 @@
                 <span class="input-number-decrement ti-angle-down"></span>
             </div>
 
-      <input class="form-control text-right cart-qty"
+      <input class="input-number menu-font cart-qty"
+      type="number" min="0" max="1000"
       value = "{{ d.get_formatted('qty') }}"
       data-item-code="{{ d.item_code }}">
 
