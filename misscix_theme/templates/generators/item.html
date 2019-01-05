@@ -12,7 +12,8 @@
 
 {% block page_content %}
 {% from "templates/includes/macros.html" import slayt_resim %}
-<div class="container product-detail margin_bottom_150" itemscope itemtype="http://schema.org/Product">
+<div class="product-page-content" itemscope itemtype="http://schema.org/Product">
+<div class="container product-detail margin_bottom_150">
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 margin_bottom_50">
 			<div class="row">
@@ -55,7 +56,6 @@
 			<p class="item-price hide price margin_bottom_10" itemprop="price"></p>
 			<div class="item-stock hide number-font capital" itemprop="availability"></div>
 			<p>Pul Payet Mini Boy Elbise paket içeriği 5 adet seriden oluşmaktadır.</p>
-			<p class="des-font margin_bottom_30 margin_top_50"><b class="menu-font">{{ _("Item Code") }}:</b> <span itemprop="productID">{{ variant and variant.name or name }}</span></p>
 			<div class="margin_bottom_30">
 				<div class="item-attribute-selectors">
 					{% if has_variants and attributes %}
@@ -157,6 +157,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 <script>
 	{% include "templates/includes/product_page.js" %}
