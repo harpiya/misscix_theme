@@ -1,11 +1,9 @@
-{% from "templates/includes/macros.html" import product_image_square %}
+{% from "templates/includes/macros.html" import sepet_urun_gorseli %}
 
 {% macro item_name_and_description(d) %}
     <div class="row item_name_and_description">
         <div class="col-xs-4 col-sm-2 order-image-col">
-            <div class="order-image">
-                {{ product_image_square(d.image) }}
-            </div>
+                {{ sepet_urun_gorseli(d.image) }}
         </div>
         <div class="col-xs-8 col-sm-10">
             {{ d.item_code }}

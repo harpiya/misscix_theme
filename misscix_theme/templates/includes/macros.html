@@ -1,3 +1,14 @@
+{% macro sepet_urun_gorseli(website_image, css_class="") %}
+{% if website_image -%}
+	<meta itemprop="image" content="{{ frappe.utils.quoted(website_image) | abs_url }}"></meta>
+{%- endif %}
+{% if website_image -%}
+<div class="product-img">
+		<img src="{{ frappe.utils.quoted(website_image) | abs_url }}" class="img-responsive" alt="MissCix Koleksiyon">
+</div>
+{%- endif %}
+{% endmacro %}
+
 {% macro product_image_square(website_image, css_class="") %}
 {% if website_image -%}
 	<meta itemprop="image" content="{{ frappe.utils.quoted(website_image) | abs_url }}"></meta>
