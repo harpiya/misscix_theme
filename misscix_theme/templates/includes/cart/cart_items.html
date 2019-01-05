@@ -9,19 +9,19 @@
     <div class="col-sm-2 col-xs-3 text-right col-qty">
         <span style="display: inline-block">
 			<div class="input-group number-spinner">
-                <span class="input-group-btn">
+                <span class="input-number-increment ti-angle-up">
                     <button class="btn btn-default cart-btn" data-dir="dwn">
                         –</button>
                 </span>
             <input class="form-control text-right cart-qty"
             value = "{{ d.get_formatted('qty') }}"
             data-item-code="{{ d.item_code }}">
-                <span class="input-group-btn">
+                <span class="input-number-increment ti-angle-up">
                     <button class="btn btn-default cart-btn" data-dir="up" style="margin-left:-2px;">
                         +</button>
                 </span>
 			</div>
-		</span>    	
+		</span>
 	</div>
     <div class="col-sm-2 col-xs-3 text-right col-amount">
         {{ d.get_formatted("amount") }}
