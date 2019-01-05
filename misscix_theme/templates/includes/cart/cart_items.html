@@ -3,26 +3,52 @@
 
 {% for d in doc.items %}
 
-<td class=" product-name">
+<td class="product-name">
 {{ item_name_and_description(d) }}
 </td>
 <td class="btn-fuction">
     <div class="input-number-group">
         <div class="relative input-number-custom">
         <div class="input-group-button absolute down-btn">
-            <span class="input-number-decrement ti-angle-down"></span>
+            <span class="input-number-decrement ti-angle-down" data-dir="dwn"></span>
         </div>
           <input class="input-number menu-font" type="number" min="0" max="1000" value = "{{ d.get_formatted('qty') }}"
           data-item-code="{{ d.item_code }}">
         <div class="input-group-button absolute up-btn">
-            <span class="input-number-increment ti-angle-up"></span>
+            <span class="input-number-increment ti-angle-up" data-dir="up"></span>
         </div>
         </div>
     </div>
 </td>
 <td class="total-price">
-  {{ d.get_formatted("amount") }}
+  <p class="price">{{ d.get_formatted("amount") }}</p>
 </td>
 
-
+<div class="row checkout">
+    <div class="col-sm-8 col-xs-6 col-name-description">
+        {{ item_name_and_description(d) }}
+    </div>
+    <div class="col-sm-2 col-xs-3 text-right col-qty">
+        <span style="display: inline-block">
+			<div class="input-group number-spinner">
+                <span class="input-group-btn">
+                    <button class="btn btn-default cart-btn" data-dir="dwn">
+                        –</button>
+                </span>
+            <input class="form-control text-right cart-qty"
+            value = "{{ d.get_formatted('qty') }}"
+            data-item-code="{{ d.item_code }}">
+                <span class="input-group-btn">
+                    <button class="btn btn-default cart-btn" data-dir="up" style="margin-left:-2px;">
+                        +</button>
+                </span>
+			</div>
+		</span>
+	</div>
+    <div class="col-sm-2 col-xs-3 text-right col-amount">
+        {{ d.get_formatted("amount") }}
+        <p class="text-muted small item-rate">{{
+            _("Rate: {0}").format(d.get_formatted("rate")) }}</p>
+    </div>
+</div>
 {% endfor %}
