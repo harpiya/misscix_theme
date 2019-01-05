@@ -1,0 +1,177 @@
+{% extends "templates/web.html" %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block breadcrumbs %}
+	{% include "templates/includes/breadcrumbs.html" %}
+{% endblock %}
+
+{% block page_content %}
+{% from "erpnext/templates/includes/macros.html" import product_image %}
+<div class="item-content">
+	<div class="product-page-content" itemscope itemtype="http://schema.org/Product">
+		<div class="row">
+			<div class="row">
+				{% if slideshow %}
+				{% set slideshow_items = frappe.get_list(doctype="Website Slideshow Item",  fields=["image"], filters={ "parent": doc.slideshow }) %}
+				<div class="col-md-1">
+				{%- for slideshow_item in slideshow_items -%}
+					{% set image_src = slideshow_item['image'] %}
+					{% if image_src %}
+					<div class="item-alternative-image border">
+						<img src="{{ image_src }}" height="50" weight="50" />
+					</div>
+					{% endif %}
+				{% endfor %}
+				</div>
+				<div class="col-md-5">
+					<div class="item-image">
+						{% set first_image = slideshow_items[0]['image'] %}
+						{{ product_image(first_image, "product-full-image") }}
+					</div>
+				</div>
+				{% else %}
+				<div class="col-md-6">
+					{{ product_image(website_image, "product-full-image") }}
+				</div>
+				{% endif %}
+				<div class="col-sm-6">
+					<h2 itemprop="name">{{ item_name }}</h2>
+					<p class="text-muted">
+						{{ _("Item Code") }}: <span itemprop="productID">{{ variant and variant.name or name }}</span>
+					</p>
+					<br>
+					<div class="item-attribute-selectors">
+						{% if has_variants and attributes %}
+
+						{% for d in attributes %}
+						{% if attribute_values[d.attribute] -%}
+						<div class="item-view-attribute {% if (attribute_values[d.attribute] | len)==1 -%} hidden {%- endif %}"
+								style="margin-bottom: 10px;">
+							<h6 class="text-muted">{{ _(d.attribute) }}</h6>
+							<select class="form-control"
+								style="max-width: 140px"
+								data-attribute="{{ d.attribute }}">
+							{% for value in attribute_values[d.attribute] %}
+							<option value="{{ value }}"
+							{% if selected_attributes and selected_attributes[d.attribute]==value -%}
+								selected
+							{%- elif disabled_attributes and value in disabled_attributes.get(d.attribute, []) -%}
+								disabled
+							{%- endif %}>
+								{{ _(value) }}
+							</option>
+							{% endfor %}
+							</select>
+						</div>
+						{%- endif %}
+						{% endfor %}
+
+						{% endif %}
+					</div>
+					<br>
+					<div>
+						<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+							<h4 class="item-price hide" itemprop="price"></h4>
+							<div class="item-stock hide" itemprop="availability"></div>
+						</div>
+						<div class="item-cart hide">
+							<div id="item-spinner">
+								<span style="display: inline-block">
+									<div class="input-group number-spinner">
+										<span class="input-group-btn">
+											<button class="btn btn-default cart-btn" data-dir="dwn">
+												–</button>
+										</span>
+										<input class="form-control text-right cart-qty" value="1">
+										<span class="input-group-btn">
+											<button class="btn btn-default cart-btn" data-dir="up" style="margin-left:-2px;">
+											+</button>
+										</span>
+									</div>
+								</span>
+							</div>
+							<div id="item-add-to-cart">
+								<button class="btn btn-primary btn-sm">
+									{{ _("Add to Cart") }}</button>
+							</div>
+							<div id="item-update-cart" style="display: none;">
+								<a href="/cart" class='btn btn-sm btn-default'>
+									<i class='octicon octicon-check'></i>
+									{{ _("View in Cart") }}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-content-detail container margin_bottom_150">
+				<div class="border-bot space_bot_100">
+						<ul class="nav nav-tabs btn-tab-product-detail margin_bottom_100">
+						  <li class="active"><a data-toggle="tab" href="#home" class=" menu-font btn-tab relative">Açıklama<figure class="line"></figure></a></li>
+						  <li class="container_60"><a data-toggle="tab" href="#menu1" class=" menu-font btn-tab relative">Ödeme, Kargo ve İade Koşulları<figure class="line"></figure></a></li>
+						  <li><a data-toggle="tab" href="#menu2" class=" menu-font btn-tab relative">Müşteri Yorumları (0)<figure class="line"></figure></a></li>
+						</ul>
+						<div class="tab-content">
+			  				<div id="home" class="tab-pane fade in active">
+			  				  	<p class="des-font des-tab">Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior. Tonal patent coated
+								interior. Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior. Tonal patent
+								coated interior.<br><br></p>
+								<ul class="space_left_20 des-font des-tab">
+									<li>Leather</li>
+									<li>Made in Italy</li>
+								</ul>
+								<h2 class="menu-font btn-tab">Features:</h2>
+								<ul class="space_left_20 des-font des-tab">
+									<li>Compatible for indoor and outdoor use</li>
+									<li>Wide polypropylene shell seat for unrivalled comfort</li>
+									<li>Rust-resistant frame</li>
+									<li>Durable UV and weather-resistant construction</li>
+									<li>Shell seat features water draining recess</li>
+									<li>Shell and base are stackable for transport</li>
+									<li>Choice of monochrome finishes and colourways</li>
+									<li>Designed by Nagi</li>
+								</ul>
+			  				</div>
+			  				<div id="menu1" class="tab-pane fade">
+				  				<p class="des-font des-tab">Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top
+								handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior.
+								Tonal patent coated interior.<br><br></p>
+								<ul class="space_left_20 des-font des-tab">
+									<li>Leather</li>
+									<li>Made in Italy</li>
+								</ul>
+			  				</div>
+			  				<div id="menu2" class="tab-pane fade">
+			  					<div class="row">
+			  				  	<div class="review margin_bottom_50 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						  			<h1 class="menu-font title-review">Yorumlar</h1>
+						  			<p class="des-font content-review">Henüz yorum yapılmamış</p>
+						  		</div>
+						  		<div class="form-review col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						  			<h1 class="menu-font title-form">“Pul Payet Mini Boy Elbise“ için ilk yorumu siz yapın </h1>
+						  			<p class="des-font des-review margin_bottom_50">E-posta hesabınız yayımlanmayacak. * işaretli alanların doldurulması gerekir.</p>
+						  			<form>
+						  				<input type="text" name="name" placeholder="Adınız Soyadınız*" class="margin_bottom_20 des-font">
+						  				<input type="email" name="EMAIL" placeholder="E-posta adresiniz*" class="margin_bottom_20 des-font">
+						  				<textarea placeholder="Mesajınız*" class="margin_bottom_20 des-font"></textarea>
+						  				<button type="submit" class="menu-font uppercase">gönder</button>
+						  			</form>
+						  		</div>
+						  		</div>
+						</div>
+			  				</div>
+						</div>
+
+		</div>
+	</div>
+</div>
+<script>
+	{% include "templates/includes/product_page.js" %}
+
+	{% if variant_info %}
+	window.variant_info = {{ variant_info }};
+	{% else %}
+	window.variant_info = null;
+	{% endif %}
+</script>
+{% endblock %}
