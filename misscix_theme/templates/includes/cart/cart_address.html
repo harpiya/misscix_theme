@@ -4,18 +4,18 @@
 		{% set select_address = True %}
 	{% endif %}
 	<div class="col-sm-6">
-		<div class="h6 text-uppercase">{{ _("Shipping Address") }}</div>
+		<div class="h6 title-font text-uppercase">{{ _("Shipping Address") }}</div>
 		<div id="cart-shipping-address" class="panel-group"
 			data-fieldname="shipping_address_name">
             {% for address in shipping_addresses %}
                 {{ show_address(address, doc, "shipping_address_name", select_address) }}
             {% endfor %}
         </div>
-		<a class="btn btn-default btn-sm" href="/addresses">
+		<a class="btn-nixx number-font" href="/addresses">
 			{{ _("Manage Addresses") }}</a>
 	</div>
 	<div class="col-sm-6">
-        <div class="h6 text-uppercase">{{ _("Billing Address") }}</div>
+        <div class="h6 title-font text-uppercase">{{ _("Billing Address") }}</div>
 		<div id="cart-billing-address" class="panel-group"
 			data-fieldname="customer_address">
             {% for address in billing_addresses %}
