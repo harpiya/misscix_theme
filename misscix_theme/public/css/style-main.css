@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-05T11:46:45+03:00
+ * @Last modified time: 2019-01-05T19:49:20+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -3417,7 +3417,7 @@ header {
 .product-detail .info-product-detail .btn-function a {
   color: #333;
   display: inline-flex;
-  width: 80px;
+  width: auto;
   line-height: 60px;
   justify-content: center;
   border: 1px solid #ddd;
