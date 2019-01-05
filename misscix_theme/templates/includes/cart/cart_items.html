@@ -1,10 +1,14 @@
-{% from "templates/includes/order/order_macros.html" import item_name_and_description %}
+{% from "templates/includes/order/order_macros.html" import urun_gorseli %}
+{% from "templates/includes/order/order_macros.html" import urun_aciklama %}
 {% from "templates/includes/order/order_macros.html" import item_name_and_description_cart %}
 
 {% for d in doc.items %}
 <tr class="item_cart cart-items">
 <td class="product-name">
-{{ item_name_and_description(d) }}
+{{ urun_gorseli(d) }}
+</td>
+<td class="product-desc">
+{{ urun_aciklama(d) }}
 </td>
 <td class="total-price">
   <p class="price">{{ d.get_formatted("rate") }}</p>
