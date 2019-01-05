@@ -4,6 +4,12 @@
 
 {% block header %}<h2>{{ _("My Cart") }}</h2>{% endblock %}
 
+{% if not no_breadcrumbs and parents %}
+  {% block breadcrumbs %}
+  {% include 'templates/includes/breadcrumbs.html' %}
+  {% endblock %}
+{% endif %}
+
 {% block script %}
 <script>{% include "templates/includes/cart.js" %}</script>
 {% endblock %}
