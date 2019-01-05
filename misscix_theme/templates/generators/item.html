@@ -58,6 +58,11 @@
 			<div class="item-stock hide number-font capital" itemprop="availability"></div>
 			<p>Pul Payet Mini Boy Elbise paket içeriği 5 adet seriden oluşmaktadır.</p>
 			<div class="margin_bottom_30">
+				<h2 itemprop="name">{{ item_name }}</h2>
+				<p class="text-muted">
+					{{ _("Item Code") }}: <span itemprop="productID">{{ variant and variant.name or name }}</span>
+				</p>
+				<br>
 				<div class="item-attribute-selectors">
 					{% if has_variants and attributes %}
 
