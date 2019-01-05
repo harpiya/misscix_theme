@@ -145,7 +145,7 @@
 				<h2 class="menu-font btn-tab">{{ _("Specifications") }}:</h2>
 				<ul class="space_left_20 des-font des-tab">
 					{% for d in website_specifications -%}
-					<li><span>{{ d.label }}: {{ d.description }}</span></li>
+					<li><span class="font-weight-bold">{{ d.label }}:</span>  {{ d.description }}</li>
 					{% endfor %}
 				</ul>
 				{% endif %}
