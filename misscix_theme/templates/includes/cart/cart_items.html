@@ -1,7 +1,8 @@
 {% from "templates/includes/order/order_macros.html" import urun_gorseli %}
 {% from "templates/includes/order/order_macros.html" import urun_aciklama %}
-<tr class="item_cart cart-items">
+
 {% for d in doc.items %}
+
 <td class="product-name">
 {{ urun_gorseli(d) }}
 </td>
@@ -34,4 +35,3 @@
   <p class="price">{{ d.get_formatted("amount") }}</p>
 </td>
 {% endfor %}
-</tr>
