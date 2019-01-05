@@ -3,12 +3,22 @@
 {% block title %} {{ _("Shopping Cart") }} {% endblock %}
 
 {% block header %}<h2>{{ _("My Cart") }}</h2>{% endblock %}
-
-{% block breadcrumbs %}
-<p>breadcrumbs</p>
-{% endblock %}
 {% block sepet_baslik %}
-<p>asdasd</p>
+<div class="banner margin_bottom_50">
+	<div class="container">
+		<h1 class="title-font title-banner">{{ title or "" }}</h1>
+		<ul class="breadcrumb des-font">
+			{% for parent in parents %}
+				<li>
+					<a href="{{ url_prefix }}{{ parent.route | abs_url }}" itemprop="url">
+						{{ parent.title or parent.label or parent.name or "" }}
+					</a>
+				</li>
+			{% endfor %}
+			<li class="active">{{ title or "" }}</li>
+		</ul>
+	</div>
+</div>
 {% endblock %}
 
 {% block script %}
