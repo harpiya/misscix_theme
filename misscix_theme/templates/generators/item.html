@@ -2,6 +2,11 @@
 
 {% block title %} {{ title }} {% endblock %}
 
+{% block meta_block %}
+	{% include "templates/includes/meta_block.html" %}
+{% endblock %}
+
+
 {% block breadcrumbs %}
 	{% include "templates/includes/breadcrumbs.html" %}
 {% endblock %}
