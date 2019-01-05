@@ -6,16 +6,14 @@
 {% block sepet_baslik %}
 <div class="banner margin_bottom_50">
 	<div class="container">
-		<h1 class="title-font title-banner">{{ title or "" }}</h1>
+		<h1 class="title-font title-banner">{{ _("My Cart") }}</h1>
 		<ul class="breadcrumb des-font">
-			{% for parent in parents %}
 				<li>
-					<a href="{{ url_prefix }}{{ parent.route | abs_url }}" itemprop="url">
-						{{ parent.title or parent.label or parent.name or "" }}
+					<a href="/}" itemprop="url">
+						{{ _("Home") }}
 					</a>
 				</li>
-			{% endfor %}
-			<li class="active">{{ title or "" }}</li>
+			<li class="active">{{ _("My Cart") }}</li>
 		</ul>
 	</div>
 </div>
