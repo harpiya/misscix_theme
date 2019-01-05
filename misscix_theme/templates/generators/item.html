@@ -28,8 +28,14 @@
 				</div>
 				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
 					<div class="slick-product-detail-vertical margin_bottom_20">
-						{% set first_image = slideshow_items[0]['image'] %}
-						{{ slayt_resim(first_image, "product-full-image") }}
+						{%- for slideshow_item in slideshow_items -%}
+							{% set image_src = slideshow_item['image'] %}
+							{% if image_src %}
+						<div>
+							<img src="{{ image_src }}" class="img-responsive full-width" alt="MissCix">
+						</div>
+						{% endif %}
+					{% endfor %}
 					</div>
 				</div>
 				{% else %}
