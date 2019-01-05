@@ -79,10 +79,15 @@
 					</div>
 					</div>
 				</div>
-				<form method="post" action="/cart/add" enctype="multipart/form-data" class="inline-block icon-addcart">
-  							  <input type="hidden" name="id" value="" />
-  							  <button type="submit" name="add" class="enj-add-to-cart-btn btn-default menu-font uppercase">sepete ekle</button>
-  			</form>
+				<div id="item-add-to-cart">
+					<button class="enj-add-to-cart-btn btn-default menu-font uppercase">
+						{{ _("Add to Cart") }}</button>
+				</div>
+				<div id="item-update-cart" style="display: none;">
+					<a href="/cart" class='btn btn-sm btn-default'>
+						<i class='octicon octicon-check'></i>
+						{{ _("View in Cart") }}</a>
+				</div>				
 			</div>
 			<!--  -->
 			<div class="info-more">
