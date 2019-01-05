@@ -43,14 +43,14 @@
           <table class="table cart-table">
               <thead>
                   <tr class="number-font">
-                      <th class="product-thumbnail uppercase">{{ _("Item") }}</th>
-                      <th class="product-name uppercase">{{ _("description") }}</th>
-                      <th class="product-price uppercase">{{ _("Rate") }}</th>
-                      <th class="product-quantity uppercase">{{ _("Qty") }}</th>
-                      <th class="product-subtotal uppercase">{{ _("Subtotal") }}</th>
+                      <th class="product-thumbnail uppercase" style="color:#000">{{ _("Item") }}</th>
+                      <th class="product-name uppercase" style="color:#000">{{ _("description") }}</th>
+                      <th class="product-price uppercase" style="color:#000">{{ _("Rate") }}</th>
+                      <th class="product-quantity uppercase" style="color:#000">{{ _("Qty") }}</th>
+                      <th class="product-subtotal uppercase" style="color:#000">{{ _("Subtotal") }}</th>
                   </tr>
               </thead>
-              <tbody>  
+              <tbody>
                   {% include "templates/includes/cart/cart_items.html" %}
               </tbody>
           </table>
