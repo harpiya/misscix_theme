@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2018-12-27T13:16:27+03:00
+ * @Last modified time: 2019-01-05T11:40:45+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -1163,14 +1163,7 @@ li:hover .link-menu {
   float: left;
   margin-right: 15px; }
 
-.panel {
-  margin: 0;
-  padding: 0 40px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  box-shadow: unset; }
+
 
 /*----end-----*/
 .open-sidebar {
