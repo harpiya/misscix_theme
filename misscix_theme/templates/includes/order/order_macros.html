@@ -1,15 +1,12 @@
 {% from "templates/includes/macros.html" import sepet_urun_gorseli %}
 
 {% macro item_name_and_description(d) %}
-    <div class="row item_name_and_description">
-        <div class="col-xs-4 col-sm-2 order-image-col">
+
                 {{ sepet_urun_gorseli(d.image) }}
-        </div>
         <div class="col-xs-8 col-sm-10">
             {{ d.item_code }}
             <div class="text-muted small item-description">{{ d.description }}</div>
         </div>
-    </div>
 {% endmacro %}
 
 {% macro item_name_and_description_cart(d) %}
