@@ -1,0 +1,68 @@
+{% from "erpnext/templates/includes/macros.html" import product_image_square %}
+
+
+
+<div class="container shop-page margin_bottom_150">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-shop full-shop">
+			<div class="row btn-function-shop">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 margin_bottom_50">
+					<span class="des-font showing hidden-xs">Showing 1–9 of 50 results</span>
+					<button class="active" id="btn-grid"><i class="ti-layout-grid3-alt"></i></button>
+					<button id="btn-list"><i class="ti-list"></i></button>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 margin_bottom_50 text-right select-view">
+					<button><i class="ti-eye"></i></button>
+					<select id="select-show">
+						<option>Sort by popularity</option>
+                        <option>Featured</option>
+                        <option>Best selling</option>
+                        <option>Alphabetically, A - Z</option>
+                        <option>Price, hight to low</option>
+                        <option>Price, low to hight</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<!--  -->
+				<div class="product col-lg-2 col-md-4 col-sm-6 col-xs-6 margin_bottom_50 clear-none">
+					<div class="img-product relative">
+						{{ product_image_square(website_image) }}
+						<figure class="absolute uppercase label-new title-font text-center">new</figure>
+					</div>
+					<div class="product-info">
+					<div class="info-product text-center">
+						<h4 class="des-font capital title-product space_top_20"><a href="{{ route|abs_url }}">{{ item_name or name }}</a></h4>
+						{% if price_sales_uom %}<p class="number-font price-product"><span class="price">({{ price_stock_uom }} / {{ stock_uom }})</span></p>{% endif %}
+            {% if show_availability_status %}
+      				{% if in_stock or not is_stock_item %}
+      					<div style='color: green'> <i class='fa fa-check'></i> {{ _("In stock") }}</div>
+      				{% else %}
+      					<div style='color: red'> <i class='fa fa-close'></i> {{ _("Not in stock") }}</div>
+      				{% endif %}
+      			{% endif %}
+						<p class="des-font des-product">Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top
+						handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior.
+						Tonal patent coated interior.</p>
+					</div>
+					</div>
+				</div>
+				<!--  -->
+
+			</div>
+			<!--  -->
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="pagination">
+						<li><a href="#" class="des-font border"><i class="ti-arrow-left"></i></a></li>
+						<li><a href="#" class="des-font active">1</a></li>
+						<li><a href="#" class="des-font">2</a></li>
+						<li><a href="#" class="des-font">3</a></li>
+						<li><a href="#" class="des-font">...</a></li>
+						<li><a href="#" class="des-font border"><i class="ti-arrow-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
