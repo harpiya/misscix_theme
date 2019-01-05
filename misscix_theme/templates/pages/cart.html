@@ -2,8 +2,7 @@
 
 {% block title %} {{ _("Shopping Cart") }} {% endblock %}
 
-{% block header %}<h2>{{ _("My Cart") }}</h2>{% endblock %}
-
+{% block header %}
 <div class="banner margin_bottom_50">
 	<div class="container">
 		<h1 class="title-font title-banner">{{ title or "" }}</h1>
@@ -17,6 +16,7 @@
 		</ul>
 	</div>
 </div>
+{% endblock %}
 
 {% block script %}
 <script>{% include "templates/includes/cart.js" %}</script>
