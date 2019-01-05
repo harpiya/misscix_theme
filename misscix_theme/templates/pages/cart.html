@@ -4,11 +4,19 @@
 
 {% block header %}<h2>{{ _("My Cart") }}</h2>{% endblock %}
 
-{% if not no_breadcrumbs and parents %}
-  {% block breadcrumbs %}
-  {% include 'templates/includes/breadcrumbs.html' %}
-  {% endblock %}
-{% endif %}
+<div class="banner margin_bottom_50">
+	<div class="container">
+		<h1 class="title-font title-banner">{{ title or "" }}</h1>
+		<ul class="breadcrumb des-font">
+				<li>
+  					<a href="/" itemprop="url">
+						{{ _("Home") }}
+					</a>
+				</li>
+			<li class="active">{{ _("My Cart") }}</li>
+		</ul>
+	</div>
+</div>
 
 {% block script %}
 <script>{% include "templates/includes/cart.js" %}</script>
