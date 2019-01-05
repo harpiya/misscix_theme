@@ -13,7 +13,7 @@
             <span class="input-number-decrement ti-angle-down"></span>
         </div>
           <input class="input-number menu-font" type="number" min="0" max="1000" value = "{{ d.get_formatted('qty') }}"
-          data-item-code="{{ d.item_code }}"> >
+          data-item-code="{{ d.item_code }}">
         <div class="input-group-button absolute up-btn">
             <span class="input-number-increment ti-angle-up"></span>
         </div>
@@ -21,7 +21,7 @@
     </div>
 </td>
 <td class="total-price">
-  <p class="price number-font">{{ d.get_formatted("amount") }}</p>
+  {{ d.get_formatted("amount") }}
 </td>
 
 
