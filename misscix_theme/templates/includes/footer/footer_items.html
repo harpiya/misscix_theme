@@ -7,7 +7,7 @@
 		{%- if page.child_items -%}
 			<h4 class="des-font space_bot_10 title-about-home1 text-left">{{ page.label }}</h4>
 			{%- for child in page.child_items -%}
-				<h5 class="title-font uppercase text-left">
+				<h5 class="title-font uppercase text-left" style="color: #fff;">
 					<a href="{{ child.url | abs_url }}"
 										{% if child.target %}target="_blank"{% endif %}>{{ child.label }}</a>
 				</h5>
