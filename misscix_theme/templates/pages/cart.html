@@ -22,15 +22,6 @@
 <script>{% include "templates/includes/cart.js" %}</script>
 {% endblock %}
 
-
-{% block header_actions %}
-{% if doc.items %}
-<button class="btn btn-primary btn-place-order btn-sm"
-    type="button">
-    {{ _("Place Order") }}</button>
-{% endif %}
-{% endblock %}
-
 {% block page_content %}
 
 {% from "templates/includes/macros.html" import item_name_and_description %}
