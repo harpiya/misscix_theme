@@ -1,8 +1,8 @@
 {% macro show_address(address, doc, fieldname, select_address=False) %}
 {% set selected=address.name==doc.get(fieldname) %}
 
-<div class="card card-default">
-	<div class="card-heading">
+<div class="card card-accent-success mb-3" style="max-width: 18rem;">
+	<div class="card-header">
 		<div class="row">
 			<div class="col-sm-10 address-title"
 				data-address-name="{{ address.name }}">
@@ -14,9 +14,9 @@
                     {{ "checked" if selected else "" }}></div>
 		</div>
 	</div>
-	<div class="card-collapse"
+	<div class="card-body"
         data-address-name="{{ address.name }}">
-		<div class="card-body text-muted small">{{ address.display }}</div>
+		<div class="small">{{ address.display }}</div>
 	</div>
 </div>
 {% endmacro %}
