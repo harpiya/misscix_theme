@@ -4,6 +4,8 @@
 		{% set select_address = True %}
 	{% endif %}
 	<div class="col-sm-6">
+		<a class="btn-nixx number-font margin_top_50" href="/addresses">
+			{{ _("Manage Addresses") }}</a>		
 		<div class="h4 title-font text-uppercase">{{ _("Shipping Address") }}</div>
 		<div id="cart-shipping-address" class="card-group"
 			data-fieldname="shipping_address_name">
@@ -11,8 +13,6 @@
                 {{ show_address(address, doc, "shipping_address_name", select_address) }}
             {% endfor %}
         </div>
-		<a class="btn-nixx number-font" href="/addresses">
-			{{ _("Manage Addresses") }}</a>
 	</div>
 	<div class="col-sm-6">
         <div class="h4 title-font text-uppercase">{{ _("Billing Address") }}</div>
