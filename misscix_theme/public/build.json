@@ -1,6 +1,7 @@
 {
     "css/misscix_theme.min.css": [
         "public/scss/style.scss",
-        "public/css/style-main.css"
+        "public/css/style-main.css",
+	"public/css/responsive.css"
     ]
 }
