@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-08T00:53:52+03:00
+ * @Last modified time: 2019-01-08T01:17:52+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -3705,7 +3705,8 @@ header {
 .card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
-    background-color: #f0f3f5;
+    background-color: black;
+    color: white;
     border-bottom: 1px solid #c8ced3
 }
 
