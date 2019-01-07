@@ -41,7 +41,9 @@
 <body data-path="{{ path }}">
 	{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
 	{% block content %}
+	<main>
 	{{ content }}
+	</main>
 	{% endblock %}
 	{%- block footer -%}{% include "templates/includes/footer/footer.html" %}{%- endblock -%}
 
