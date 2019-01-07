@@ -1,8 +1,0 @@
-{%- for name in metatags %}
-<meta {% if name == 'og:title' or name == "og:image" or name == "og:type" or name == "og:description" %} property="{{ name }}" {% else %} name="{{ name }}" {% endif %}  content="{{ metatags[name]|striptags|escape }}">
-{%- endfor -%}
-<meta property="og:url" content="{{ frappe.utils.get_url(path) }}">
-<meta itemprop="datePublished" content="{{ frappe.format_date(published_on) }}">
-<meta itemprop="author" content="MissCix Fashion">
-<meta itemprop="name" content="{{ name }}">
-<meta itemprop="description" content="{{ description }}">

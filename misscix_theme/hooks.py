@@ -1,11 +1,10 @@
-# -*- coding: utf-8 -*-
 # @Author: Saadettin Yasir AKEL <developer>
-# @Date:   2018-12-27T11:09:22+03:00
+# @Date:   2019-01-07T12:33:22+03:00
 # @Email:  yasir@harpiya.com
 # @Project: Harpiya Kurumsal Yönetim Sistemi
 # @Filename: hooks.py
 # @Last modified by:   developer
-# @Last modified time: 2019-01-05T12:08:33+03:00
+# @Last modified time: 2019-01-07T12:37:10+03:00
 # @License: MIT License. See license.txt
 # @Copyright: Harpiya Yazılım Teknolojileri
 
@@ -13,9 +12,9 @@
 
 from __future__ import unicode_literals
 app_name = "misscix_theme"
-app_title = u"Miss Cix Website Şablonu"
-app_publisher = u"Harpiya Yazılım Teknolojileri"
-app_description = u"Miss Cix Websitesi Şablonu"
+app_title = "Miss Cix Website Şablonu"
+app_publisher = "Harpiya Yazılım Teknolojileri"
+app_description = "Miss Cix Websitesi Şablonu"
 app_icon = "fa fa-globe"
 app_color = "orange"
 app_email = "info@harpiya.com"
@@ -24,6 +23,9 @@ app_version = "0.0.1"
 hide_in_installer = True
 # home_page = "home"
 
+website_context = {
+	"disable_website_theme": True
+}
 
 # Includes in <head>
 # ------------------
@@ -33,7 +35,7 @@ hide_in_installer = True
 # app_include_js = "/assets/misscix_theme/js/misscix_theme.js"
 
 # include js, css files in header of web template
-web_include_css = "/assets/css/misscix.min.css"
+# web_include_css = "/assets/misscix_theme/css/misscix_theme.css"
 # web_include_js = "/assets/misscix_theme/js/misscix_theme.js"
 
 # Installation

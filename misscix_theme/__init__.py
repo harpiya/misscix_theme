@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
 # @Author: Saadettin Yasir AKEL <developer>
-# @Date:   2018-12-27T11:09:22+03:00
+# @Date:   2019-01-07T12:33:22+03:00
 # @Email:  yasir@harpiya.com
 # @Project: Harpiya Kurumsal Yönetim Sistemi
 # @Filename: __init__.py
 # @Last modified by:   developer
-# @Last modified time: 2018-12-28T22:13:22+03:00
+# @Last modified time: 2019-01-07T12:37:52+03:00
 # @License: MIT License. See license.txt
 # @Copyright: Harpiya Yazılım Teknolojileri

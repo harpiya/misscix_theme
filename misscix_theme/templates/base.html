@@ -1,61 +1,44 @@
 <!DOCTYPE html>
-<!-- Built on Harpiya. https://harpiya.com/ -->
+<!-- Built on Frappe. https://harpiya.com/ -->
 <html lang="tr">
 <head>
-	<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-  'customerType': 'vip',
-  'registrationCountry': 'Turkey'
-  });
-  </script>
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-5BCZXB6');</script>
-	<!-- End Google Tag Manager -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %} {{ title | striptags }} {% endblock %}</title>
-	<meta name="generator" content="harpiya">
-    {% block favicon %}
+	<meta name="generator" content="frappe">
+	{% block favicon %}
 	<link rel="shortcut icon"
 		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
 		type="image/x-icon">
 	<link rel="icon"
 		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
 		type="image/x-icon">
-    {% endblock %}
+	{% endblock %}
 	{%- block head -%}
-		{% block meta_block %}{% endblock %}
-		{% if head_html is defined -%}
-		{{ head_html or "" }}
-		{%- endif %}
-		{%- for link in web_include_css %}
-		<link type="text/css" rel="stylesheet" href="{{ link|abs_url }}">
-		{%- endfor -%}
-		<link rel="stylesheet" href="/assets/misscix_theme/css/themify-icons.css">
-		<link rel="stylesheet" href="/assets/misscix_theme/css/zoa-font.css">
-		<link rel="stylesheet" href="/assets/misscix_theme/css/font-family.css">
-	    {%- block head_include %}{{ head_include or "" }}{% endblock -%}
-		{%- block style %}{%- endblock -%}
+	{% block meta_block %}{% endblock %}
+	<link href="/assets/css/misscix_theme.min.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font-awesome.css">
+	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/octicons/octicons.css">
+	<link type="text/css" rel="stylesheet" href="/assets/frappe_theme/css/github.css">
+	<!-- {% if path == 'login' or template == 'website/doctype/web_form/templates/web_form.html' %}
+	<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
+	{% endif %} -->
+	<style>
+		{% include "templates/includes/custom.css" ignore missing %}
+	</style>
 	{%- endblock -%}
-    <script>
-		window.frappe = {};
-		frappe.ready_events = [];
-		frappe.ready = function(fn) {
-			frappe.ready_events.push(fn);
-		}
-		window.dev_server = {{ dev_server }};
-    </script>
+	{%- block head_include %}{{ head_include or "" }}{% endblock -%}
+	{%- block style %}{%- endblock -%}
+	<script>
+	window.frappe = {};
+	frappe.ready_events = [];
+	frappe.ready = function(fn) {
+	frappe.ready_events.push(fn);
+	}
+	window.dev_server = {{ dev_server }};
+	</script>
 </head>
 <body data-path="{{ path }}">
-	<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BCZXB6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 	{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
 	{% block content %}
 	{{ content }}
@@ -66,8 +49,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- js should be loaded in body! -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js"></script>
 	<script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
-	<script src="/assets/js/misscix.min.js" defer=""></script>
+	<script type="text/javascript" src="/assets/js/harpiya-web.min.js"></script>
+	<script type="text/javascript" src="/assets/misscix_theme/bootstrap-4/js/popper.min.js"></script>
+	<script type="text/javascript" src="/assets/misscix_theme/bootstrap-4/js/bootstrap.min.js"></script>
 	{% endblock %}
 {%- if js_globals is defined %}
 <script>
@@ -82,23 +66,6 @@ window.{{ key }} = "{{ value[0] }}";
 {%- block script %}{%- endblock %}
 <!-- csrf_token -->
 {%- block body_include %}{{ body_include or "" }}{% endblock -%}
-<script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "Miss Cix",
-        "url": "https://www.misscix.com.tr",
-        "logo": "https://www.misscix.com.tr/assets/misscix_theme/img/misscix-logo.png",
-        "contactPoint": [{
-            "@type": "ContactPoint",
-            "telephone": "+90 212 505 0583",
-            "contactType": "customer service"
-        }],
-        "sameAs": ["https://www.facebook.com/ADEM.DEMIRBAS.MISSCIX",
-            "https://instagram.com/misscixfashion",
-            "https://plus.google.com/+NiNetTrDatacenter"
-        ]
-    }
-</script>
+<script type="text/javascript" src="/assets/misscix_theme/js/misscix_theme.js"></script>
 </body>
 </html>
