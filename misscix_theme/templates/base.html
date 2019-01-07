@@ -37,11 +37,11 @@
 </head>
 <body data-path="{{ path }}">
 	{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
-	{% block content %}
 	<main>
+	{% block content %}
 	{{ content }}
-	</main>
 	{% endblock %}
+	</main>
 	{%- block footer -%}{% include "templates/includes/footer/footer.html" %}{%- endblock -%}
 
 	{% block base_scripts %}
