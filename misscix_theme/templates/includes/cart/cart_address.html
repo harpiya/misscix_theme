@@ -5,7 +5,7 @@
 	{% endif %}
 	<div class="col-sm-6">
 		<div class="h4 title-font text-uppercase">{{ _("Shipping Address") }}</div>
-		<div id="cart-shipping-address" class="panel-group"
+		<div id="cart-shipping-address" class="card-group"
 			data-fieldname="shipping_address_name">
             {% for address in shipping_addresses %}
                 {{ show_address(address, doc, "shipping_address_name", select_address) }}
@@ -16,7 +16,7 @@
 	</div>
 	<div class="col-sm-6">
         <div class="h4 title-font text-uppercase">{{ _("Billing Address") }}</div>
-		<div id="cart-billing-address" class="panel-group"
+		<div id="cart-billing-address" class="card-group"
 			data-fieldname="customer_address">
             {% for address in billing_addresses %}
                 {{ show_address(address, doc, "customer_address", select_address) }}
