@@ -36,14 +36,17 @@
 	</script>
 </head>
 <body data-path="{{ path }}">
+	<header>
 	{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
+	</header>
 	<main>
 	{% block content %}
 	{{ content }}
 	{% endblock %}
 	</main>
+	<footer>
 	{%- block footer -%}{% include "templates/includes/footer/footer.html" %}{%- endblock -%}
-
+	</footer>
 	{% block base_scripts %}
 	<!-- js should be loaded in body! -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js"></script>
