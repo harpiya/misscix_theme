@@ -1,0 +1,11 @@
+{% from "templates/includes/macros.html" import sepet_urun_gorseli %}
+
+{% macro urun_gorseli(d) %}
+                {{ sepet_urun_gorseli(d.image) }}
+{% endmacro %}
+{% macro urun_aciklama(d) %}
+                    <div class="product-info">
+                        <a href="#" class="title-font link-default">{{ d.description }}</a>
+                        <p class="number-font margin_top_20">SKU: <span class="menu-child-font">{{ d.item_code }}</span></p>
+                    </div>
+{% endmacro %}
