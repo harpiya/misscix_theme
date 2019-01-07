@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-07T14:46:46+03:00
+ * @Last modified time: 2019-01-07T14:52:28+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -1355,6 +1355,10 @@ li:hover .link-menu {
   height: 36px;
   margin-left: 10px; }
 
+.select:nth-child(2) {
+  width: 150px;
+  height: 36px;
+  margin-left: 0; }
 
 /*----end----*/
 /*end*/
