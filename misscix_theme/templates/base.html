@@ -15,13 +15,9 @@
 		type="image/x-icon">
 	{% endblock %}
 	{%- block head -%}
-		{% block meta_block %}{% endblock %}
-		{% if head_html is defined -%}
-		{{ head_html or "" }}
-		{%- endif %}
-		{%- for link in web_include_css %}
-		<link type="text/css" rel="stylesheet" href="{{ link|abs_url }}">
-		{%- endfor -%}
+	{%- for link in web_include_css %}
+	<link type="text/css" rel="stylesheet" href="{{ link|abs_url }}">
+	{%- endfor -%}
 	{% block meta_block %}{% endblock %}
 	<link type="text/css" rel="stylesheet" href="/assets/css/harpiya-web.css">
 	<link type="text/css" rel="stylesheet" href="/assets/css/harpiyaerp-web.css">
