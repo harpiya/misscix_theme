@@ -1,14 +1,14 @@
 {% macro show_address(address, doc, fieldname, select_address=False) %}
 {% set selected=address.name==doc.get(fieldname) %}
 
-<div class="card card-accent-success mb-3">
+<div class="card card-accent-primary mb-3">
 	<div class="card-header">
 		<div class="row">
 			<div class="col-sm-10 address-title"
 				data-address-name="{{ address.name }}">
                 <strong>{{ address.name }}</strong></div>
 			<div class="col-sm-2 text-right">
-                <input type="checkbox" class="form-control"
+                <input type="checkbox"
                 data-fieldname="{{ fieldname }}"
 				data-address-name="{{ address.name}}"
                     {{ "checked" if selected else "" }}></div>

@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-08T01:17:52+03:00
+ * @Last modified time: 2019-01-08T01:24:22+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -4031,7 +4031,7 @@ header {
 }
 
 .card-accent-primary {
-    border-top-color: #20a8d8;
+    border-top-color: #da5284;
     border-top-width: 2px
 }
 
