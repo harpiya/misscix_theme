@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-07T14:44:50+03:00
+ * @Last modified time: 2019-01-07T14:46:46+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -1345,10 +1345,7 @@ li:hover .link-menu {
 /*end*/
 /*select custom*/
 /*custom select*/
-.select-hidden {
-  display: none;
-  visibility: hidden;
-  padding-right: 10px; }
+
 
 .select {
   cursor: pointer;
@@ -1357,6 +1354,7 @@ li:hover .link-menu {
   width: 150px;
   height: 36px;
   margin-left: 10px; }
+
 
 /*----end----*/
 /*end*/
