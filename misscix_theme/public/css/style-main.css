@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-07T21:45:44+03:00
+ * @Last modified time: 2019-01-07T21:48:24+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -3347,7 +3347,7 @@ header {
     right: 50px;
     top: 10px; }
 .product-detail .info-product-detail .btn-function div button.enj-add-to-cart-btn {
-  width: 250px;
+  width: 200px;
   line-height: 60px;
   border: 1px solid black;
   margin-right: 30px;
