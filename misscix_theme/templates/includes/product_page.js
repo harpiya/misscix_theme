@@ -1,11 +1,11 @@
 /**
  * @Author: Saadettin Yasir AKEL <developer>
- * @Date:   2019-01-07T22:19:59+03:00
+ * @Date:   2019-01-07T22:27:00+03:00
  * @Email:  yasir@harpiya.com
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: product_page.js
  * @Last modified by:   developer
- * @Last modified time: 2019-01-07T22:27:00+03:00
+ * @Last modified time: 2019-01-07T22:35:35+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -99,7 +99,7 @@ frappe.ready(function() {
 		input.val(newVal);
 	});
 
-	$("[itemscope] .item-view-attribute .select-styled").on("change", function() {
+	$("[itemscope] .item-view-attribute .form-control").on("change", function() {
 		try {
 			var item_code = encodeURIComponent(get_item_code());
 
