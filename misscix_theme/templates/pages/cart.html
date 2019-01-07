@@ -56,7 +56,11 @@
 		{% if doc.items %}
 		<!-- taxes -->
 		<div class="row cart-taxes">
-			<div class="col-sm-6"><!-- empty --></div>
+			<div class="col-sm-6">
+				<div class="cart-btn-group">
+						<a href="/products" class="btn-nixx number-font pull-left">Alışverişe Devam Et</a>
+				</div>
+			</div>
 			<div class="col-sm-6 text-right cart-tax-items">
 			{% include "templates/includes/order/order_taxes.html" %}
 			</div>
