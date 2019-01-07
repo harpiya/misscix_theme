@@ -1,17 +1,36 @@
 /**
  * @Author: Saadettin Yasir AKEL <developer>
- * @Date:   2019-01-05T19:49:20+03:00
+ * @Date:   2018-12-27T13:14:01+03:00
  * @Email:  yasir@harpiya.com
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-07T11:45:17+03:00
+ * @Last modified time: 2018-12-27T13:15:55+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
 
 
 
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+1. Body
+2. Header / #header
+3. Navigation / #navbar
+4. Content / #content
+5. Left column / #leftcolumn
+6. Right column / #rightcolumn
+7. Sidebar / #sidebar
+8. RSS / #rss
+9. Search / #search
+10. Boxes / .box
+11. Sideblog / #sideblog
+12. Advertisements / .ads
+13. Footer / #footer
+
+-------------------------------------------------------------------*/
 * {
   outline: 0 !important;
   box-sizing: border-box; }
@@ -1144,6 +1163,14 @@ li:hover .link-menu {
   float: left;
   margin-right: 15px; }
 
+.panel {
+  margin: 0;
+  padding: 0 40px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  box-shadow: unset; }
 
 /*----end-----*/
 .open-sidebar {
@@ -3398,7 +3425,7 @@ header {
 .product-detail .info-product-detail .btn-function a {
   color: #333;
   display: inline-flex;
-  width: auto;
+  width: 80px;
   line-height: 60px;
   justify-content: center;
   border: 1px solid #ddd;

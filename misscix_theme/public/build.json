@@ -2,6 +2,7 @@
     "css/misscix_theme.min.css": [
       "public/css/bootstrap.min.css",
       "public/css/bootstrap-theme.min.css",
+      "public/css/font-awesome.min.css",
       "public/css/themify-icons.css",
       "public/css/zoa-font.css",
       "public/css/font-family.css",
