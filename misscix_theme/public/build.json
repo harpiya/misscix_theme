@@ -1,11 +1,7 @@
 {
     "css/misscix.min.css": [
-        "public/css/bootstrap.min.css",
-        "public/css/bootstrap-theme.min.css",
-        "public/css/slick.css",
-        "public/css/slick-theme.css",
+
         "public/css/style-main.css",
-        "public/css/responsive.css"
     ],
     "js/misscix.min.js": [
 
