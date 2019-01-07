@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-07T22:57:01+03:00
+ * @Last modified time: 2019-01-08T00:07:58+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -3616,7 +3616,7 @@ header {
   margin-bottom: 50px; }
   .table-cart-bottom .cart-text .cart-element {
     justify-content: space-between;
-    margin-bottom: 20px; }
+    margin-bottom: 0px; }
   .table-cart-bottom .cart-text p {
     font-size: 18px; }
 
