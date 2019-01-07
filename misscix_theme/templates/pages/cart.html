@@ -50,9 +50,13 @@
                       <th class="product-subtotal uppercase" style="color:#333">{{ _("Subtotal") }}</th>
                   </tr>
               </thead>
-              <tbody>
+							{% if doc.items %}
+              <tbody class="cart-items">
                   {% include "templates/includes/cart/cart_items.html" %}
               </tbody>
+							{% else %}
+							<p class="empty-cart">{{ _("Cart is Empty") }}</p>
+							{% endif %}
           </table>
       </div>
 		</div>
