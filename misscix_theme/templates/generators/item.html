@@ -69,7 +69,7 @@
 				<div class="item-view-attribute {% if (attribute_values[d.attribute] | len)==1 -%} hidden {%- endif %}"
 						style="margin-bottom: 10px;">
 					<h6 class="text-muted">{{ _(d.attribute) }}</h6>
-					<select class="form-contol"
+					<select class="form-control"
 						style="max-width: 140px"
 						data-attribute="{{ d.attribute }}">
 					{% for value in attribute_values[d.attribute] %}
