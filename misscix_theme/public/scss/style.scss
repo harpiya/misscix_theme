@@ -4,7 +4,7 @@
 // @Project: Harpiya Kurumsal Yönetim Sistemi
 // @Filename: style.scss
 // @Last modified by:   developer
-// @Last modified time: 2019-01-07T22:46:06+03:00
+// @Last modified time: 2019-01-07T22:52:38+03:00
 // @License: MIT License. See license.txt
 // @Copyright: Harpiya Yazılım Teknolojileri
 $gray-100: #fafbfc;
@@ -27,51 +27,6 @@ $yiq-contrasted-threshold: 180;
 
 $card-border-color: $gray-300;
 $card-cap-bg: $gray-100;
-
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
-@import "../bootstrap-4/scss/bootstrap";
-
-
-
-
-.navbar {
-	border-bottom: 0;
-	padding: 0.5rem 0;
-
-	.container {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-}
-
-.logged-in .avatar {
-	margin-top: -4px;
-}
-
-.navbar-brand {
-	font-weight: 600;
-	font-family: 'Fira Sans';
-
-	img {
-		width: 30px;
-	}
-
-	span {
-		line-height: 1.7;
-	}
-}
-
-@media (max-width: 840px) {
-	.navbar-brand {
-		margin-left: 1rem;
-	}
-
-	.page-content-wrapper {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-}
 
 .img-box {
 	width: 100px;
@@ -135,53 +90,7 @@ section, .section-padding, .top-section {
 	line-height: 1.8;
 }
 
-.w-400 {
-	max-width: 400px;
-	margin: auto;
-}
 
-.w-500 {
-	max-width: 500px;
-	margin: auto;
-}
-
-
-.mt-large {
-	margin-top: 10rem !important;
-}
-
-a.btn, a.card, a.no-decoration {
-	text-decoration: none !important;
-}
-
-.page-content-wrapper {
-	min-height: 500px;
-	line-height: 1.8;
-	p, li {
-//		font-size: 16px;
-	}
-
-	a {
-		text-decoration: underline;
-	}
-
-	h2, h3, h4 {
-		line-height: 1.8;
-	}
-}
-
-.dropdown-item.active,
-.dropdown-item:active {
-	background-color: $gray-500;
-}
-
-footer {
-	padding-bottom: 3rem;
-}
-
-.bg-light-yellow {
-	background-color: #fffce7;
-}
 
 /*****************/
 
@@ -520,49 +429,6 @@ img,
 	border: 1px solid #d1d8dd;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-}
-
-/* documentation styles */
-
-body[data-path*="docs"],
-body[data-path*="features"],
-body[data-path="docs"],
-body[data-path*="help"] {
-	.page-content-wrapper {
-		line-height: 1.7;
-		padding-bottom: 3rem;
-	}
-
-	.navbar {
-		border-bottom: 1px solid $border-color;
-	}
-
-	h1 {
-		font-size: 2.2rem;
-
-		&:first-child {
-			margin-top: 1rem;
-		}
-	}
-
-	h2 {
-		font-size: 1.65rem;
-	}
-
-	h1:first-child + p {
-		margin-top: 2rem;
-	}
-
-	.breadcrumb {
-		padding-left: 0px;
-		margin-bottom: -1rem;
-	}
-
-	.breadcrumb-item {
-//		font-size: 14px;
-		margin-top: 0.5rem;
-	}
-
 }
 
 
