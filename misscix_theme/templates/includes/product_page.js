@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: product_page.js
  * @Last modified by:   developer
- * @Last modified time: 2019-01-07T22:24:32+03:00
+ * @Last modified time: 2019-01-07T22:27:00+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -212,7 +212,7 @@ function find_closest_match(selected_attribute, selected_attribute_value) {
 		for (var j in matched.attributes) {
 			var attr = matched.attributes[j];
 			$('[itemscope]')
-				.find(repl('.item-view-attribute .select-styled[data-attribute="%(attribute)s"]', attr))
+				.find(repl('.item-view-attribute .form-control[data-attribute="%(attribute)s"]', attr))
 				.val(attr.attribute_value);
 		}
 
@@ -222,7 +222,7 @@ function find_closest_match(selected_attribute, selected_attribute_value) {
 
 function get_selected_attributes() {
 	var attributes = {};
-	$('[itemscope]').find(".item-view-attribute .select-styled").each(function() {
+	$('[itemscope]').find(".item-view-attribute .form-control").each(function() {
 		attributes[$(this).attr('data-attribute')] = $(this).val();
 	});
 	return attributes;
