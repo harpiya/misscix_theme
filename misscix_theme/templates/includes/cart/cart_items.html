@@ -1,0 +1,38 @@
+{% from "templates/includes/order/order_macros.html" import urun_gorseli %}
+{% from "templates/includes/order/order_macros.html" import urun_aciklama %}
+
+{% for d in doc.items %}
+<tr class="item_cart cart-items">
+<td class="product-name">
+{{ urun_gorseli(d) }}
+</td>
+<td class="product-desc">
+{{ urun_aciklama(d) }}
+</td>
+<td>
+  <p class="price">{{ d.get_formatted("rate") }}</p>
+</td>
+<td class="btn-fuction">
+    <div class="input-number-group col-qty">
+        <div class="relative input-number-custom number-spinner">
+          <div class="input-group-button absolute down-btn">
+                <span class="input-number-decrement ti-angle-down" data-dir="dwn"></span>
+            </div>
+
+      <input class="input-number menu-font cart-qty"
+      type="number" min="0" max="1000"
+      value = "{{ d.get_formatted('qty') }}"
+      data-item-code="{{ d.item_code }}">
+
+                                  <div class="input-group-button absolute up-btn">
+                                      <span class="input-number-increment ti-angle-up" data-dir="up"></span>
+                                  </div>
+
+        </div>
+    </div>
+</td>
+<td class="total-price">
+  <p class="price">{{ d.get_formatted("amount") }}</p>
+</td>
+</tr>
+{% endfor %}
