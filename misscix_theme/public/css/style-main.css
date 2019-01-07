@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-07T21:57:43+03:00
+ * @Last modified time: 2019-01-07T21:59:33+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -1372,6 +1372,7 @@ li:hover .link-menu {
   left: 0;
   background: #fff;
   text-align: left;
+  transition: all 0.2s ease-in;
   font-family: "FuturaPT Book";
   font-size: 18px; }
   .select-styled:after {
