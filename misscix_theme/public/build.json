@@ -11,7 +11,5 @@
         "public/js/bootstrap.min.js",
         "public/js/slick.min.js",
         "public/js/function-main.js",
-        "public/js/function-select-custom.js",
-        "public/js/function-input-number.js"
     ]
 }
