@@ -3,17 +3,15 @@
 {% block content %}
 
 {% macro main_content() %}
+{% if not no_breadcrumbs and parents %}
+	{% block breadcrumbs %}
+	{% include 'templates/includes/breadcrumbs.html' %}
+	{% endblock %}
+{% endif %}
+{% block sepet_baslik %}
+{% endblock %}
 	<div class="container">
 		<div class="row">
-			<div class='col-sm-12'>
-				{% if not no_breadcrumbs and parents %}
-				<div class="page-breadcrumbs">
-					{% block breadcrumbs %}
-					{% include 'templates/includes/breadcrumbs.html' %}
-					{% endblock %}
-				</div>
-				{% endif %}
-			</div>
 			{% if doctype != 'Blog Post' %}
 			<div class="col-sm-8 col-xs-6">
 				{% block header %}{% endblock %}
