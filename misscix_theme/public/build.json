@@ -9,7 +9,8 @@
       "public/css/slick.css",
       "public/css/slick-theme.css",
       "public/css/style-main.css",
-      "public/css/responsive.css"
+      "public/css/responsive.css",
+      "public/scss/style.scss"
     ],
     "js/misscix.min.js": [
         "public/js/bootstrap.min.js",

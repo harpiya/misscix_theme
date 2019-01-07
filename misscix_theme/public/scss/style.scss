@@ -1,15 +1,12 @@
 // @Author: Saadettin Yasir AKEL <developer>
-// @Date:   2019-01-07T12:33:22+03:00
+// @Date:   2019-01-07T22:44:42+03:00
 // @Email:  yasir@harpiya.com
 // @Project: Harpiya Kurumsal Yönetim Sistemi
 // @Filename: style.scss
 // @Last modified by:   developer
-// @Last modified time: 2019-01-07T13:32:42+03:00
+// @Last modified time: 2019-01-07T22:46:06+03:00
 // @License: MIT License. See license.txt
 // @Copyright: Harpiya Yazılım Teknolojileri
-
-
-
 $gray-100: #fafbfc;
 $gray-200: #E9E9EE;
 $gray-300: #d1d8dd;
@@ -35,32 +32,8 @@ $card-cap-bg: $gray-100;
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 @import "../bootstrap-4/scss/bootstrap";
 
-body {
-	//font-family: 'Source Sans Pro';
-	//font-size: 16px;
-	overflow-x: hidden;
-}
 
-h1, h2, h3, h4, h5 {
-	//font-family: 'Fira Sans';
-	//font-weight: 600;
 
-	a {
-		text-decoration: none !important;
-	}
-}
-
-p, .page-content-wrapper li {
-//	font-size: 16px;
-}
-
-.lead {
-	line-height: 1.5;
-}
-
-.container {
-	max-width: 840px !important;
-}
 
 .navbar {
 	border-bottom: 0;
