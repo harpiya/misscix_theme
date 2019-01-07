@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-08T00:07:58+03:00
+ * @Last modified time: 2019-01-08T00:46:09+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -3636,11 +3636,75 @@ header {
 
 /*# sourceMappingURL=style-main.css.map */
 
-.card {
-//	border-top-width: 7px;
-	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+body {
+  background-color: #F5F5F5;
 }
-
-.card-body {
-	line-height: 1.8;
+.panel-theme,
+.panel-primary,
+.panel-success,
+.panel-info,
+.panel-warning,
+.panel-danger {
+  background-color: #FFFFFF;
+  border: none;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.panel-theme > .panel-heading {
+  background-color: #FFFFFF;
+  border: none;
+}
+.panel-theme > .panel-heading .badge {
+  color: #FFFFFF;
+  background-color: #0000 0;
+}
+.panel-theme > .panel-heading .panel-title {
+  font-weight: bold;
+}
+.panel-theme > .panel-footer {
+  background-color: #FFFFFF;
+  border: none;
+  border-top: 1px solid #E0E0E0;
+}
+.panel-theme > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom: none;
+}
+.panel-primary > .panel-heading {
+  background-color: #2196F3;
+  color: #fff;
+}
+.panel-primary > .panel-heading .badge {
+  color: #2196F3;
+  background-color: #fff;
+}
+.panel-success > .panel-heading {
+  background-color: #8BC34A;
+  color: #fff;
+}
+.panel-success > .panel-heading .badge {
+  color: #8BC34A;
+  background-color: #fff;
+}
+.panel-info > .panel-heading {
+  background-color: #00BCD4;
+  color: #fff;
+}
+.panel-info > .panel-heading .badge {
+  color: #00BCD4;
+  background-color: #fff;
+}
+.panel-warning > .panel-heading {
+  background-color: #FF9800;
+  color: #fff;
+}
+.panel-warning > .panel-heading .badge {
+  color: #FF9800;
+  background-color: #fff;
+}
+.panel-danger > .panel-heading {
+  background-color: #F44336;
+  color: #fff;
+}
+.panel-danger > .panel-heading .badge {
+  color: #F44336;
+  background-color: #fff;
 }
