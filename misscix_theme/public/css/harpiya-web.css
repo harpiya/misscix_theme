@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: harpiya.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-08T15:25:54+03:00
+ * @Last modified time: 2019-01-08T15:29:51+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -4331,76 +4331,7 @@
  .octicon-x:before { content: '\f081'} /* ï‚ */
  .octicon-zap:before { content: '\26A1'} /* âš¡ */
 
- /* palette colors*/
- /* the element that this class is applied to, should have a max width for this to work*/
- body {
-   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
- }
- a {
-   cursor: pointer;
- }
- a,
- a:hover,
- a:active,
- a:focus,
- .btn,
- .btn:hover,
- .btn:active,
- .btn:focus {
-   outline: 0;
- }
- img {
-   max-width: 100%;
- }
- p {
-   margin: 10px 0;
- }
- .text-color {
-   color: #36414c !important;
- }
- .text-muted {
-   color: #8D99A6 !important;
- }
- .text-extra-muted {
-   color: #d1d8dd !important;
- }
- a,
- .badge {
-   -webkit-transition: 0.2s;
-   -o-transition: 0.2s;
-   transition: 0.2s;
- }
- .btn {
-   -webkit-transition: background-color 0.2s;
-   -o-transition: background-color 0.2s;
-   transition: background-color 0.2s;
- }
- a.disabled,
- a.disabled:hover {
-   color: #888;
-   cursor: default;
-   text-decoration: none;
- }
- a.grey,
- .sidebar-section a,
- .control-value a,
- .data-row a {
-   text-decoration: none;
- }
- a.grey:hover,
- .sidebar-section a:hover,
- .control-value a:hover,
- .data-row a:hover,
- a.grey:focus,
- .sidebar-section a:focus,
- .control-value a:focus,
- .data-row a:focus {
-   text-decoration: underline;
- }
- a.text-muted,
- a.text-extra-muted {
-   text-decoration: none;
- }
+
  .underline {
    text-decoration: underline;
  }
