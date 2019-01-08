@@ -16,12 +16,17 @@
 	{% endblock %}
 	{%- block head -%}
 	{% block meta_block %}{% endblock %}
-	<link rel="stylesheet" href="/assets/css/misscix-web.css">
+	<link rel="stylesheet" href="/assets/misscix_theme/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/misscix_theme/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="/assets/misscix_theme/css/harpiya-web.css">
 	<link rel="stylesheet" href="/assets/misscix_theme/css/themify-icons.css">
 	<link rel="stylesheet" href="/assets/misscix_theme/css/zoa-font.css">
+	<link rel="stylesheet" href="/assets/misscix_theme/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="/assets/misscix_theme/css/font-family.css">
-
+	<link rel="stylesheet" href="/assets/misscix_theme/css/slick.css">
+	<link rel="stylesheet" href="/assets/misscix_theme/css/slick-theme.css">
+	<link rel="stylesheet" href="/assets/misscix_theme/css/style-main.css">
+	<link rel="stylesheet" href="/assets/misscix_theme/css/responsive.css">
 	<!-- {% if path == 'login' or template == 'website/doctype/web_form/templates/web_form.html' %}
 	<link type="text/css" rel="stylesheet" href="/assets/css/harpiya-web.css">
 	{% endif %} -->
@@ -54,10 +59,7 @@
 	<!-- js should be loaded in body! -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js"></script>
 	<script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
-	<script type="text/javascript"
-	src="/assets/frappe/js/lib/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/assets/js/harpiya-web.min.js"></script>
-	<script type="text/javascript" src="/assets/js/harpiyaerp-web.min.js"></script>
 	<script type="text/javascript" src="/assets/js/misscix.min.js"></script>
 	{% endblock %}
 {%- if js_globals is defined %}
