@@ -1,5 +1,5 @@
 {
-    "css/misscix.min.css": [
+    "css/misscix-style.min.css": [
       "public/css/bootstrap.min.css",
       "public/css/bootstrap-theme.min.css",
       "public/css/slick.css",
