@@ -21,14 +21,14 @@
 	    	{{ _("Cancel") }}</a>
 		{%- endif %}
 		{% if not is_list %}
-	    <button type="submit" class="btn btn-sm btn-form-submit btn-nixx">
+	    <button type="submit" class="btn-misscix menu-font btn-form-submit">
 	    		{{ _("Save") }}</button>
 		{% endif %}
 	</div>
 	{% endif %}
 	{% if is_list %}
 	<div style="padding-bottom: 15px;">
-	    <a href="/{{ pathname }}{{ delimeter }}new=1{{ params_from_form_dict}}" class="btn btn-primary btn-new btn-sm">
+	    <a href="/{{ pathname }}{{ delimeter }}new=1{{ params_from_form_dict}}" class="btn-misscix btn-new menu-font">
 	    {{ _("New") }}
 		</a>
 		<button class="btn btn-danger btn-delete btn-sm">
@@ -59,7 +59,7 @@
 		{{ _("Please sign-up or login to begin") }}
 	</div>
 	<p>
-		<a href="/login?redirect-to=/{{ pathname }}" class="btn btn-primary">
+		<a href="/login?redirect-to=/{{ pathname }}" class="btn-misscix menu-font">
 			{{ _("Login") }}
 		</a>
 	</p>
@@ -151,7 +151,7 @@
 				<!-- save/next button -->
 				{% if (loop.index == layout|len or frappe.form_dict.new) %}
 					{% if not read_only %}
-				    <button type="submit" class="btn btn-primary btn-sm btn-form-submit">
+				    <button type="submit" class="btn-misscix menu-font btn-form-submit">
 				    	{{ _("Save") }}</button>
 					{% endif %}
 				{% elif layout|len > 1 %}

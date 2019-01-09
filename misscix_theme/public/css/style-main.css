@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-09T00:47:12+03:00
+ * @Last modified time: 2019-01-09T21:22:14+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -627,6 +627,19 @@ a:focus {
 
 .btn-nixx {
   padding: 18px 88px;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  background: black;
+  transition: all .3s ease;
+  border: 0;
+  border-radius: 0; }
+  .btn-nixx:hover {
+    background: #da5284; }
+
+
+.btn-misscix {
+  padding: 10px 28px;
   text-align: center;
   display: inline-block;
   color: #fff;
