@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: style-main.css
  * @Last modified by:   developer
- * @Last modified time: 2019-01-09T21:22:14+03:00
+ * @Last modified time: 2019-01-09T22:16:07+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -3125,6 +3125,9 @@ header {
       transition: all .3s ease; }
       .blog-page .sidebar-left ul li .link-collection:hover {
         color: #da5284; }
+        .blog-page .sidebar-left ul li.active {
+          color: #da5284; }
+
   .blog-page .sidebar-left ul.post li .post-name {
     margin-top: -3px;
     margin-bottom: 20px;
