@@ -49,6 +49,10 @@
 	{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
 	<main>
 	{% block content %}
+	{% if not no_breadcrumbs and parents %}
+		{% block breadcrumbs %}
+		{% include 'templates/includes/breadcrumbs.html' %}
+		{% endblock %}	
 	{{ content }}
 	{% endblock %}
 	</main>

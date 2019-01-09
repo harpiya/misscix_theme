@@ -2,12 +2,6 @@
 {% block hero %}{% endblock %}
 {% block content %}
 
-{% macro main_content() %}
-{% if not no_breadcrumbs and parents %}
-	{% block breadcrumbs %}
-	{% include 'templates/includes/breadcrumbs.html' %}
-	{% endblock %}
-{% endif %}
 {% block sepet_baslik %}
 {% endblock %}
 		<div class="row">
