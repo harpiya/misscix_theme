@@ -29,30 +29,7 @@
 
 {% endmacro %}
 
-{% macro render_navitem(item) %}
-{% if item.child_items %}
-<li class="level1 active dropdown">
-    <span class="icon-sub-menu"></span>
-    <div class="menu-level1 js-open-menu">
-    <ul class="level1">
-        <li class="level2">
-                <a href="#" class="capital">{{ item.label }}</a>
-                <ul class="menu-level-2 clear-space">
-                  {% for child in item.child_items %}
-                    <li class="level3 capital menu-child-font"><a href="{{ (child.url or '')|abs_url }}" title="{{ child.label }}" {{ item.label }}>{{ child.label }}</a></li>
-                  {% endfor %}
-                </ul>
-        </li>
-    </ul>
-</div>
-</li>
-{% else %}
-<li class="level1">
-    <a href="{{ (item.url or '')|abs_url }}" class="uppercase" title="{{ item.label }}" {{ item.target or ''}}>{{ item.label }}</a>
-</li>
-{% endif %}
 
-{% endmacro %}
 
 <!-- push menu-->
   <div class="pushmenu menu-home5">
@@ -70,7 +47,7 @@
           <ul class="nav-home5 js-menubar clear-space menu-font">
             {%- for item in top_bar_items -%}
         			{% if not item.right and not item.parent_label -%}
-        				{{ render_navitem(item) }}
+        				{{ render_item(item) }}
         			{% endif %}
         		{%- endfor %}
           </ul>
