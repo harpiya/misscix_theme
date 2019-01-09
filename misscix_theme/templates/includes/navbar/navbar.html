@@ -32,10 +32,8 @@
 {% macro render_navitem(item) %}
 {% if item.child_items %}
 <li class="level1 active dropdown">
-    <a href="#" class="uppercase">{{ _("Home")}}</a>
     <span class="icon-sub-menu"></span>
     <div class="menu-level1 js-open-menu">
-
     <ul class="level1">
         <li class="level2">
                 <a href="#" class="capital">{{ item.label }}</a>
@@ -50,11 +48,7 @@
 </li>
 {% else %}
 <li class="level1">
-    <a href="Contact.html" class="uppercase" title="{{ item.label }}" {{ item.target or ''}}>{{ item.label }}</a>
-</li>
-<li class="relative">
-  <a href="{{ (item.url or '')|abs_url }}" class="link-menu delay03 uppercase" {{ item.target or ''}}>{{ item.label }}</a>
-  <figure class="line absolute delay03"></figure>
+    <a href="{{ (item.url or '')|abs_url }}" class="uppercase" title="{{ item.label }}" {{ item.target or ''}}>{{ item.label }}</a>
 </li>
 {% endif %}
 
