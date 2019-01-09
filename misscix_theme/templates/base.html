@@ -52,7 +52,8 @@
 	{% if not no_breadcrumbs and parents %}
 		{% block breadcrumbs %}
 		{% include 'templates/includes/breadcrumbs.html' %}
-		{% endblock %}	
+		{% endblock %}
+	{% endif %}	
 	{{ content }}
 	{% endblock %}
 	</main>
