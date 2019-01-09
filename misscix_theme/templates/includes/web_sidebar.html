@@ -14,23 +14,23 @@
 		</div>
 	</div> -->
 	<div class="sidebar-items">
-		<ul class="list-unstyled">
+		<ul class="category margin_bottom_70 clear-space-left space_right_10">
 			{% if sidebar_title %}
-			<li class="title">
-				{{ sidebar_title }}
+			<li>
+				<h1 class="title-font title">{{ sidebar_title }}</h1>
 			</li>
 			{% endif %}
 			{% for item in sidebar_items -%}
-			<li class="sidebar-item mb-2">
-				<a href="{{ item.route }}" class="{{ 'active' if '/' + pathname==item.route else 'text-muted' }}"
+			<li>
+				<a href="{{ item.route }}" class="des-font link-collection {{ 'active' if '/' + pathname==item.route else 'text-muted' }}"
 				{% if item.target %}target="{{ item.target }}"{% endif %}>
 				{{ _(item.title or item.label) }}
 				</a>
 			</li>
 			{%- endfor %}
 			{% if frappe.user != 'Guest' %}
-			<li class="sidebar-item mb-2">
-				<a href="/me" class="text-muted">{{ _("My Account") }}</a>
+			<li>
+				<a href="/me" class="des-font link-collection">{{ _("My Account") }}</a>
 			</li>
 			{% endif %}
 		</ul>
