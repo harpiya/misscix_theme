@@ -60,7 +60,7 @@
     <div class="col-lg-2 col-md-2 col-sm-6 col-xs-5">
       <a href="/"><img src="/assets/misscix_theme/img/misscix-logo.webp" alt="MissCix"></a>
     </div>
-    <div class="col-lg-7 col-md-7 hidden-sm hidden-xs">
+    <div class="col-lg-10 col-md-7 hidden-sm hidden-xs">
       <ul class="nav navbar-nav menu-font menu-main">
         {%- for item in top_bar_items -%}
     			{% if not item.right and not item.parent_label -%}
@@ -69,7 +69,12 @@
     		{%- endfor %}
       </ul>
     </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-7 text-right icon-main">
+    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-7 text-right icon-main">
+      {%- for item in top_bar_items -%}
+  			{% if item.right and not item.parent_label -%}
+  				{{ render_item(item) }}
+  			{% endif %}
+  		{%- endfor %}
       <a href="#" class="link-menu delay03 container_10 inline-block hidden-xs hidden-sm" id="btn-search"><i class="ti-search"></i></a>
   		{% include("misscix_theme/templates/includes/navbar/navbar_login.html") %}
       <a href="/cart" class="link-menu delay03 container_10 relative inline-block text-center cart-icon" id="navLogin">
