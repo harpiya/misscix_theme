@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: product_page.js
  * @Last modified by:   developer
- * @Last modified time: 2019-01-25T16:02:40+03:00
+ * @Last modified time: 2019-01-25T16:05:09+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -112,7 +112,7 @@ frappe.ready(function() {
 			var item_code = find_closest_match(attribute, attribute_value);
 
 			if (!item_code) {
-				frappe.msgprint({{_("Cannot find a matching Item. Please select some other value for {0}.")}}, [attribute])
+				frappe.msgprint(__("Cannot find a matching Item. Please select some other value for {0}.", [attribute]))
 				throw e;
 			}
 		}
