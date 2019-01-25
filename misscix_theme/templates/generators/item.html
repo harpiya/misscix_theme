@@ -57,10 +57,12 @@
 			</div>
 			<!--  -->
 		</div>
-		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 info-product-detail"  itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 info-product-detail">
 			<h1 class="title-font title-product margin_bottom_30">{{ item_name }}</h1>
+			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<p class="item-price hide price margin_bottom_10" itemprop="price"></p>
 			<div class="item-stock hide number-font capital" itemprop="availability"></div>
+			</div>
 			<div class="margin_bottom_30 item-attribute-selectors">
 				{% if has_variants and attributes %}
 
@@ -89,9 +91,7 @@
 
 				{% endif %}
 			</div>
-			<p class="des-font margin_bottom_30 margin_top_50"><span class="menu-font">{{ _("Item Code") }}:</span> <span itemprop="productID">{{ variant and variant.name or name }}</span></p>
-
-			<div class="flex margin_bottom_50 border-bot space_bot_10 btn-function item-cart">
+			<div class="flex margin_bottom_50 border-bot space_bot_10 btn-function item-cart hide">
 				<div id="item-spinner" class="input-number-group margin_right_10">
 					<div class="relative input-number-custom number-spinner">
 					<div class="input-group-button absolute down-btn">
@@ -142,6 +142,7 @@
 			<!--  -->
 			</div>
 			<div class="info-more">
+				<p class="des-font margin_bottom_30 margin_top_50"><span class="menu-font">{{ _("Item Code") }}:</span> <span itemprop="productID">{{ variant and variant.name or name }}</span></p>
 				<p class="margin_bottom_30">
 					<span class="menu-font margin_right_30">{{ _("Share") }}:</span>
 					<a href="#" class="delay03 margin_right_30"><i class="ti-facebook"></i></a>
