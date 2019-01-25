@@ -117,6 +117,8 @@
 			  <p class="des-font des-tab"><br><br>Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top
 				handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior.
 				Tonal patent coated interior.<br><br></p>
+				{% if website_specifications -%}
+				<h2 class="menu-font btn-tab">{{ _("Specifications") }}:</h2>
 				<ul class="space_left_20 des-font des-tab">
 					{% for d in website_specifications -%}
 					<li><span class="font-weight-bold">{{ d.label }}:</span>  {{ d.description }}</li>
