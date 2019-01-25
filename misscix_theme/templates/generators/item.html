@@ -114,9 +114,7 @@
 			<div class="inline-block margin_bottom_50">
 				<button class="accordion menu-font btn-tab">{{ _("Description") }}</button>
 			<div class="panel active">
-			  <p class="des-font des-tab"><br><br>Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top
-				handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior.
-				Tonal patent coated interior.<br><br></p>
+			  <p class="des-font des-tab"><br><br>{{ web_long_description or description or _("No description given") }}<br><br></p>
 				{% if website_specifications -%}
 				<h2 class="menu-font btn-tab">{{ _("Specifications") }}:</h2>
 				<ul class="space_left_20 des-font des-tab">
@@ -153,6 +151,7 @@
 		</div>
 	</div>
 </div>
+
 <script>
 	{% include "templates/includes/product_page.js" %}
 
