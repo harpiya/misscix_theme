@@ -45,17 +45,21 @@
         </div>
       </div>
 		</div>
-		<div class="text-center item-group-nav-buttons">
-			{% if frappe.form_dict.start|int > 0 %}
-			<a class="btn btn-default" href="/{{ pathname }}?start={{ frappe.form_dict.start|int - page_length }}">{{ _("Prev") }}</a>
-			{% endif %}
-			{% if items|length > page_length %}
-			<a class="btn btn-default" href="/{{ pathname }}?start={{ frappe.form_dict.start|int + page_length }}">{{ _("Next") }}</a>
-			{% endif %}
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="pagination">
+					{% if frappe.form_dict.start|int > 0 %}
+					<li><a href="/{{ pathname }}?start={{ frappe.form_dict.start|int - page_length }}" class="des-font border">{{ _("Prev") }}</a></li>
+					{% endif %}
+					{% if items|length > page_length %}
+					<li><a  href="/{{ pathname }}?start={{ frappe.form_dict.start|int + page_length }}" class="des-font border">{{ _("Next") }}</a></li>
+					{% endif %}
+				</ul>
+				{% else %}
+					<div class="text-muted">{{ _("No items listed") }}.</div>
+				{% endif %}
+			</div>
 		</div>
-		{% else %}
-			<div class="text-muted">{{ _("No items listed") }}.</div>
-		{% endif %}
 	</div>
 </div>
 {% endblock %}
