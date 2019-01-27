@@ -2,7 +2,7 @@
 
 <div class="product col-lg-3 col-md-4 col-sm-6 col-xs-6 margin_bottom_50 clear-none">
   <div class="img-product relative">
-    <a class="inline-block" href="{{ route|abs_url }}">{{ urun_liste_gorsel(website_image) }}</a>
+    <a class="inline-block" href="{{ route|abs_url }}">{{ urun_liste_gorsel(thumbnail or website_image or image) }}</a>
 	</div>
   <div class="product-info">
     <div class="info-product text-center">
