@@ -49,10 +49,10 @@
 			<div class="col-md-12">
 				<ul class="pagination">
 					{% if frappe.form_dict.start|int > 0 %}
-					<li><a href="/{{ pathname }}?start={{ frappe.form_dict.start|int - page_length }}" class="des-font border">{{ _("Prev") }}</a></li>
+					<li><a href="/{{ pathname }}?start={{ frappe.form_dict.start|int - page_length }}" class="btn-misscix menu-font">{{ _("Prev") }}</a></li>
 					{% endif %}
 					{% if items|length > page_length %}
-					<li><a  href="/{{ pathname }}?start={{ frappe.form_dict.start|int + page_length }}" class="des-font border">{{ _("Next") }}</a></li>
+					<li><a  href="/{{ pathname }}?start={{ frappe.form_dict.start|int + page_length }}" class="btn-misscix menu-font">{{ _("Next") }}</a></li>
 					{% endif %}
 				</ul>
 				{% else %}
