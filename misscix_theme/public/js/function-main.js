@@ -5,7 +5,7 @@
  * @Project: Harpiya Kurumsal Yönetim Sistemi
  * @Filename: function-main.js
  * @Last modified by:   developer
- * @Last modified time: 2019-01-05T02:13:02+03:00
+ * @Last modified time: 2019-01-27T16:31:32+03:00
  * @License: MIT License. See license.txt
  * @Copyright: Harpiya Yazılım Teknolojileri
  */
@@ -622,7 +622,7 @@ $(function(){
  	dots:false,
  	autoplay:false,
 	speed: 1000,
-	slidesPerRow: 5,
+	slidesPerRow: 9,
   	rows: 2,
 	responsive: [
   	{
