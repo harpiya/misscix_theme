@@ -114,25 +114,25 @@
 			</div>
 			<div class="inline-block border-bot">
 			<div class="inline-block margin_bottom_50">
-				<button class="accordion menu-font btn-tab">Description</button>
+				<button class="accordion menu-font btn-tab">{{ _("Description") }}</button>
 			<div class="panel active">
-			  <p class="des-font des-tab"><br><br>Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top
-				handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior.
-				Tonal patent coated interior.<br><br></p>
+			  <p class="des-font des-tab">{{ web_long_description or description or _("No description given") }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br><br></p>
+				{% if website_specifications -%}
+				<h2 class="menu-font btn-tab">{{ _("Specifications") }}:</h2>
 				<ul class="space_left_20 des-font des-tab">
-					<li>Leather</li>
-					<li>Made in Italy</li>
+					{% for d in website_specifications -%}
+					<li><span class="font-weight-bold">{{ d.label }}:</span>  {{ d.description }}</li>
+					{% endfor %}
 				</ul>
+				{% endif %}
 			</div>
 			</div>
 
 			<!--  -->
 			<div class="inline-block margin_bottom_50">
-			<button class="accordion menu-font btn-tab">Shipping & returns</button>
+			<button class="accordion menu-font btn-tab">{{ _("Ödeme ve Kargo") }}</button>
 			<div class="panel">
-			  <p class="des-font des-tab"><br><br>Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top
-				handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior.
-				Tonal patent coated interior.<br><br></p>
+			  <p class="des-font des-tab">{{ web_long_description or description or _("No description given") }}</p>
 				<ul class="space_left_20 des-font des-tab">
 					<li>Leather</li>
 					<li>Made in Italy</li>
