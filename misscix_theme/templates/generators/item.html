@@ -58,81 +58,58 @@
 			<!--  -->
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 info-product-detail">
-			<h1 class="title-font title-product margin_bottom_30">{{ item_name }}</h1>
-			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-			<p class="item-price hide price margin_bottom_10" itemprop="price"></p>
-			<div class="item-stock hide number-font capital" itemprop="availability"></div>
+			<h1 class="title-font title-product margin_bottom_30">Embossed backpack in brown</h1>
+			<p class="number-font price margin_bottom_40">$123.00</p>
+			<div class="margin_bottom_30">
+				<select class="menu-font">
+					<option class="uppercase">Please select a color</option>
+					<option class="capital">Black</option>
+					<option class="capital">red</option>
+					<option class="capital">white</option>
+				</select>
 			</div>
-			<div class="margin_bottom_30 item-attribute-selectors">
-				{% if has_variants and attributes %}
-
-				{% for d in attributes %}
-				{% if attribute_values[d.attribute] -%}
-				<div class="item-view-attribute {% if (attribute_values[d.attribute] | len)==1 -%} hidden {%- endif %}"
-						style="margin-bottom: 10px;">
-					<h6 class="text-muted">{{ _(d.attribute) }}</h6>
-					<select class="form-control"
-						style="max-width: 140px"
-						data-attribute="{{ d.attribute }}">
-					{% for value in attribute_values[d.attribute] %}
-					<option value="{{ value }}"
-					{% if selected_attributes and selected_attributes[d.attribute]==value -%}
-						selected
-					{%- elif disabled_attributes and value in disabled_attributes.get(d.attribute, []) -%}
-						disabled
-					{%- endif %}>
-						{{ _(value) }}
-					</option>
-					{% endfor %}
-					</select>
-				</div>
-				{%- endif %}
-				{% endfor %}
-
-				{% endif %}
-			</div>
-			<div class="flex margin_bottom_50 border-bot space_bot_10 btn-function item-cart hide">
-				<div id="item-spinner" class="input-number-group margin_right_10">
-					<div class="relative input-number-custom number-spinner">
+			<div class="flex margin_bottom_50 border-bot space_bot_50 btn-function">
+				<div class="input-number-group">
+					<div class="relative input-number-custom">
 					<div class="input-group-button absolute down-btn">
-						<span class="input-number-decrement ti-angle-down cart-btn" data-dir="dwn"></span>
+						<span class="input-number-decrement ti-angle-down"></span>
 					</div>
-					  <input class="input-number menu-font cart-qty" type="number" min="0" max="1000" value="1" >
+						<input class="input-number menu-font" type="number" min="0" max="1000" value="1" >
 					<div class="input-group-button absolute up-btn">
-						<span class="input-number-increment ti-angle-up cart-btn" data-dir="up"></span>
+						<span class="input-number-increment ti-angle-up"></span>
 					</div>
 					</div>
 				</div>
-				<div id="item-add-to-cart" class="inline-block icon-addcart">
-					<button class="enj-add-to-cart-btn btn-default menu-font uppercase">{{ _("Add to Cart") }}</button>
-				</div>
-				<div id="item-update-cart" style="display: none;">
-					<a href="/cart" class='btn btn-md btn-default'>
-						<i class='octicon octicon-check'></i>
-						{{ _("View in Cart") }}</a>
-				</div>
+				<form method="post" action="/cart/add" enctype="multipart/form-data" class="inline-block icon-addcart">
+									<input type="hidden" name="id" value="" />
+									<button type="submit" name="add" class="enj-add-to-cart-btn btn-default menu-font uppercase">add to cart</button>
+					</form>
+					<a href="#" class="icon-heart"><i class="ti-heart"></i></a>
+					<a href="#" class="engoj_btn_quickview icon-quickview" title="quickview">
+							<i class="ti-more-alt"></i>
+						</a>
 			</div>
 			<div class="inline-block border-bot">
 			<div class="inline-block margin_bottom_50">
-				<button class="accordion menu-font btn-tab">{{ _("Description") }}</button>
+				<button class="accordion menu-font btn-tab">Description</button>
 			<div class="panel active">
-			  <p class="des-font des-tab">{{ web_long_description or description or _("No description given") }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br><br></p>
-				{% if website_specifications -%}
-				<h2 class="menu-font btn-tab">{{ _("Specifications") }}:</h2>
+				<p class="des-font des-tab"><br><br>Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top
+				handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior.
+				Tonal patent coated interior.<br><br></p>
 				<ul class="space_left_20 des-font des-tab">
-					{% for d in website_specifications -%}
-					<li><span class="font-weight-bold">{{ d.label }}:</span>  {{ d.description }}</li>
-					{% endfor %}
+					<li>Leather</li>
+					<li>Made in Italy</li>
 				</ul>
-				{% endif %}
 			</div>
 			</div>
 
 			<!--  -->
 			<div class="inline-block margin_bottom_50">
-			<button class="accordion menu-font btn-tab">{{ _("Ödeme ve Kargo") }}</button>
+			<button class="accordion menu-font btn-tab">Shipping & returns</button>
 			<div class="panel">
-			  <p class="des-font des-tab">{{ web_long_description or description or _("No description given") }}</p>
+				<p class="des-font des-tab"><br><br>Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top
+				handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior.
+				Tonal patent coated interior.<br><br></p>
 				<ul class="space_left_20 des-font des-tab">
 					<li>Leather</li>
 					<li>Made in Italy</li>
@@ -142,12 +119,19 @@
 			<!--  -->
 			</div>
 			<div class="info-more">
-				<p class="des-font margin_bottom_30 margin_top_50"><span class="menu-font">{{ _("Item Code") }}:</span> <span itemprop="productID">{{ variant and variant.name or name }}</span></p>
+				<p class="des-font margin_bottom_30 margin_top_50"><span class="menu-font">SKU:</span> N/A</p>
 				<p class="margin_bottom_30">
-					<span class="menu-font margin_right_30">{{ _("Share") }}:</span>
+					<span class="menu-font margin_right_10">Categories:</span>
+					<a href="#" class="delay03 margin_right_10">Bag,</a>
+					<a href="#" class="delay03 margin_right_10">Women,</a>
+					<a href="#" class="delay03 margin_right_10">New Arrival</a>
+				</p>
+				<p class="margin_bottom_30">
+					<span class="menu-font margin_right_30">Share:</span>
 					<a href="#" class="delay03 margin_right_30"><i class="ti-facebook"></i></a>
 					<a href="#" class="delay03 margin_right_30"><i class="ti-twitter-alt"></i></a>
 					<a href="#" class="delay03 margin_right_30"><i class="ti-pinterest"></i></a>
+					<a href="#" class="delay03 margin_right_30"><i class="ti-linkedin"></i></a>
 				</p>
 			</div>
 		</div>
