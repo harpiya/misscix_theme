@@ -10,9 +10,16 @@
 	{% include "templates/includes/breadcrumbs.html" %}
 {% endblock %}
 
+{% block script %}
+<script src="/assets/misscix_theme/js/function-input-number.js" defer=""></script>
+{% endblock %}
+</script> %}
+
 {% block page_content %}
 {% from "templates/includes/macros.html" import slayt_resim %}
-<div class="container product-detail margin_bottom_150" itemscope itemtype="http://schema.org/Product">
+
+
+<div class="container product-detail item-content" itemscope itemtype="http://schema.org/Product">
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 margin_bottom_50">
 			<div class="row">
@@ -50,11 +57,12 @@
 			</div>
 			<!--  -->
 		</div>
-		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 info-product-detail" itemscope itemtype="http://schema.org/Offer">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 info-product-detail">
 			<h1 class="title-font title-product margin_bottom_30">{{ item_name }}</h1>
+			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<p class="item-price hide price margin_bottom_10" itemprop="price"></p>
 			<div class="item-stock hide number-font capital" itemprop="availability"></div>
-			<p>Pul Payet Mini Boy Elbise paket içeriği 5 adet seriden oluşmaktadır.</p>
+			</div>
 			<div class="margin_bottom_30 item-attribute-selectors">
 				{% if has_variants and attributes %}
 
@@ -83,8 +91,7 @@
 
 				{% endif %}
 			</div>
-
-			<div class="flex margin_bottom_50 border-bot space_bot_10 btn-function item-cart">
+			<div class="flex margin_bottom_50 border-bot space_bot_10 btn-function item-cart hide">
 				<div id="item-spinner" class="input-number-group margin_right_10">
 					<div class="relative input-number-custom number-spinner">
 					<div class="input-group-button absolute down-btn">
@@ -96,44 +103,20 @@
 					</div>
 					</div>
 				</div>
-				<form id="item-add-to-cart" class="inline-block icon-addcart">
-  				<button class="enj-add-to-cart-btn btn-default menu-font uppercase">{{ _("Add to Cart") }}</button>
-  			</form>
+				<div id="item-add-to-cart" class="inline-block icon-addcart">
+					<button class="enj-add-to-cart-btn btn-default menu-font uppercase">{{ _("Add to Cart") }}</button>
+				</div>
 				<div id="item-update-cart" style="display: none;">
 					<a href="/cart" class='btn btn-md btn-default'>
 						<i class='octicon octicon-check'></i>
 						{{ _("View in Cart") }}</a>
 				</div>
 			</div>
-			<!--  -->
-			<div class="info-more">
-				<p class="des-font margin_bottom_30 margin_top_50"><b class="menu-font">{{ _("Item Code") }}:</b> <span itemprop="productID">{{ variant and variant.name or name }}</span></p>
-				<p class="margin_bottom_30">
-					<span class="menu-font margin_right_10">Seri</span>
-					<a href="#" class="delay03 margin_right_10">S,</a>
-					<a href="#" class="delay03 margin_right_10">M,</a>
-					<a href="#" class="delay03 margin_right_10">L,</a>
-					<a href="#" class="delay03 margin_right_10">XL</a>
-				</p>
-				<div class="margin_bottom_30">
-					<h4 class="menu-font margin_right_30">Paylaş:</h4>
-					<div class="sharethis-inline-share-buttons"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<div class="tab-content-detail container margin_bottom_50">
-	<div class="border-bot space_bot_100">
-		<ul class="nav nav-tabs btn-tab-product-detail margin_bottom_100">
-			<li class="active"><a data-toggle="tab" href="#home" class=" menu-font btn-tab relative">{{ _("Description") }}<figure class="line"></figure></a></li>
-			<li class="container_60"><a data-toggle="tab" href="#menu1" class=" menu-font btn-tab relative">Ödeme, Kargo ve İade Koşulları<figure class="line"></figure></a></li>
-		</ul>
-		<div class="tab-content">
-			<div id="home" class="tab-pane fade in active">
-				<p class="des-font des-tab">{{ web_long_description or description or _("No description given") }}</p>
+			<div class="inline-block border-bot">
+			<div class="inline-block margin_bottom_50">
+				<button class="accordion menu-font btn-tab">{{ _("Description") }}</button>
+			<div class="panel active">
+			  <p class="des-font des-tab">{{ web_long_description or description or _("No description given") }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br><br></p>
 				{% if website_specifications -%}
 				<h2 class="menu-font btn-tab">{{ _("Specifications") }}:</h2>
 				<ul class="space_left_20 des-font des-tab">
@@ -143,18 +126,34 @@
 				</ul>
 				{% endif %}
 			</div>
-  		<div id="menu1" class="tab-pane fade">
-				<p class="des-font des-tab">Tote bag from Mansur Gavriel in Saddle. Calf leather. Open compartment. Interior side pocket. Top
-					handles. Detachable, adjustable shoulder strap. Goldtone hardware. Embossed logo detailing at exterior.
-					Tonal patent coated interior.<br><br></p>
+			</div>
+
+			<!--  -->
+			<div class="inline-block margin_bottom_50">
+			<button class="accordion menu-font btn-tab">{{ _("Ödeme ve Kargo") }}</button>
+			<div class="panel">
+			  <p class="des-font des-tab">{{ web_long_description or description or _("No description given") }}</p>
 				<ul class="space_left_20 des-font des-tab">
 					<li>Leather</li>
 					<li>Made in Italy</li>
 				</ul>
 			</div>
+			</div>
+			<!--  -->
+			</div>
+			<div class="info-more">
+				<p class="des-font margin_bottom_30 margin_top_50"><span class="menu-font">{{ _("Item Code") }}:</span> <span itemprop="productID">{{ variant and variant.name or name }}</span></p>
+				<p class="margin_bottom_30">
+					<span class="menu-font margin_right_30">{{ _("Share") }}:</span>
+					<a href="#" class="delay03 margin_right_30"><i class="ti-facebook"></i></a>
+					<a href="#" class="delay03 margin_right_30"><i class="ti-twitter-alt"></i></a>
+					<a href="#" class="delay03 margin_right_30"><i class="ti-pinterest"></i></a>
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
+
 <script>
 	{% include "templates/includes/product_page.js" %}
 
